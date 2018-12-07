@@ -2363,3 +2363,1143 @@ org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Abstract
 2018-12-07 15:23:17,584  INFO BlockManagerInfo:58 - Removed broadcast_1_piece0 on localhost:7700 in memory (size: 2.4 KB, free: 2.4 GB)
 2018-12-07 15:23:17,584  INFO ContextCleaner:58 - Cleaned accumulator 1
 2018-12-07 15:23:17,586  INFO ContextCleaner:58 - Cleaned shuffle 0
+2018-12-07 15:27:59,769  INFO SparkdemoApplication:48 - Starting SparkdemoApplication on BayMin--PC with PID 20824 (F:\IDEA-WorkSpace\sparkdemo\target\classes started by lenovo in F:\IDEA-WorkSpace\sparkdemo)
+2018-12-07 15:27:59,772  INFO SparkdemoApplication:666 - No active profile set, falling back to default profiles: default
+2018-12-07 15:27:59,959  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2018-12-07 15:28:00,134  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6385cb26: startup date [Fri Dec 07 15:28:00 CST 2018]; root of context hierarchy
+2018-12-07 15:28:01,007  INFO DefaultListableBeanFactory:839 - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-12-07 15:28:01,351  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-07 15:28:02,058  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2018-12-07 15:28:02,070  INFO StandardService:180 - Starting service Tomcat
+2018-12-07 15:28:02,073  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-12-07 15:28:02,264  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2018-12-07 15:28:02,264  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 2130 ms
+2018-12-07 15:28:02,505 ERROR TomcatStarter:63 - Error starting Tomcat context: org.springframework.beans.factory.BeanCreationException
+2018-12-07 15:28:02,541  WARN AnnotationConfigEmbeddedWebApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+2018-12-07 15:28:02,545 ERROR SpringApplication:827 - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:133)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bay.sparkspringboot.sparkdemo.SparkdemoApplication.main(SparkdemoApplication.java:12)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:99)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:76)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:457)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:168)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:160)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:130)
+	... 8 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.boot.autoconfigure.web.HttpMessageConverters org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.messageConverters; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final java.util.List org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration.converters; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mappingJackson2HttpMessageConverter' defined in class path resource [org/springframework/boot/autoconfigure/web/JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.fasterxml.jackson.databind.ObjectMapper]: : Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.boot.context.embedded.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:233)
+	at org.springframework.boot.context.embedded.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:181)
+	at org.springframework.boot.context.embedded.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.context.embedded.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:158)
+	at org.springframework.boot.context.embedded.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:79)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:237)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:224)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:85)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:209)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5244)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1408)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1398)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.boot.autoconfigure.web.HttpMessageConverters org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.messageConverters; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final java.util.List org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration.converters; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mappingJackson2HttpMessageConverter' defined in class path resource [org/springframework/boot/autoconfigure/web/JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.fasterxml.jackson.databind.ObjectMapper]: : Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 34 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final java.util.List org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration.converters; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mappingJackson2HttpMessageConverter' defined in class path resource [org/springframework/boot/autoconfigure/web/JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.fasterxml.jackson.databind.ObjectMapper]: : Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 36 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final java.util.List org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration.converters; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mappingJackson2HttpMessageConverter' defined in class path resource [org/springframework/boot/autoconfigure/web/JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.fasterxml.jackson.databind.ObjectMapper]: : Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 56 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mappingJackson2HttpMessageConverter' defined in class path resource [org/springframework/boot/autoconfigure/web/JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.fasterxml.jackson.databind.ObjectMapper]: : Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:464)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1068)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 58 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 71 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fasterxml.jackson.databind.ObjectMapper]: Factory method 'jacksonObjectMapper' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 84 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.fasterxml.jackson.databind.SerializationConfig
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:560)
+	at com.fasterxml.jackson.databind.ObjectMapper.<init>(ObjectMapper.java:476)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:553)
+	at org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration.jacksonObjectMapper(JacksonAutoConfiguration.java:87)
+	at org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration$$EnhancerBySpringCGLIB$$3e18d6c5.CGLIB$jacksonObjectMapper$0(<generated>)
+	at org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration$$EnhancerBySpringCGLIB$$3e18d6c5$$FastClassBySpringCGLIB$$5b4836ca.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration$$EnhancerBySpringCGLIB$$3e18d6c5.jacksonObjectMapper(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 85 more
+2018-12-07 15:28:02,570  INFO ClasspathLoggingApplicationListener:57 - Application failed to start with classpath: [file:/G:/java-bd/jre/lib/charsets.jar, file:/G:/java-bd/jre/lib/deploy.jar, file:/G:/java-bd/jre/lib/ext/access-bridge-64.jar, file:/G:/java-bd/jre/lib/ext/cldrdata.jar, file:/G:/java-bd/jre/lib/ext/dnsns.jar, file:/G:/java-bd/jre/lib/ext/jaccess.jar, file:/G:/java-bd/jre/lib/ext/jfxrt.jar, file:/G:/java-bd/jre/lib/ext/localedata.jar, file:/G:/java-bd/jre/lib/ext/nashorn.jar, file:/G:/java-bd/jre/lib/ext/sunec.jar, file:/G:/java-bd/jre/lib/ext/sunjce_provider.jar, file:/G:/java-bd/jre/lib/ext/sunmscapi.jar, file:/G:/java-bd/jre/lib/ext/sunpkcs11.jar, file:/G:/java-bd/jre/lib/ext/zipfs.jar, file:/G:/java-bd/jre/lib/javaws.jar, file:/G:/java-bd/jre/lib/jce.jar, file:/G:/java-bd/jre/lib/jfr.jar, file:/G:/java-bd/jre/lib/jfxswt.jar, file:/G:/java-bd/jre/lib/jsse.jar, file:/G:/java-bd/jre/lib/management-agent.jar, file:/G:/java-bd/jre/lib/plugin.jar, file:/G:/java-bd/jre/lib/resources.jar, file:/G:/java-bd/jre/lib/rt.jar, file:/F:/IDEA-WorkSpace/sparkdemo/target/classes/, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-web/1.3.2.RELEASE/spring-boot-starter-web-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter/1.3.2.RELEASE/spring-boot-starter-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot/1.3.2.RELEASE/spring-boot-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.2.RELEASE/spring-boot-autoconfigure-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-tomcat/1.3.2.RELEASE/spring-boot-starter-tomcat-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-core/8.0.30/tomcat-embed-core-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-el/8.0.30/tomcat-embed-el-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/8.0.30/tomcat-embed-logging-juli-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.30/tomcat-embed-websocket-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-validation/1.3.2.RELEASE/spring-boot-starter-validation-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/hibernate/hibernate-validator/5.2.2.Final/hibernate-validator-5.2.2.Final.jar, file:/F:/develop_software/Maven/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar, file:/F:/develop_software/Maven/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-beans/4.2.4.RELEASE/spring-beans-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-context/4.2.4.RELEASE/spring-context-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-expression/4.2.4.RELEASE/spring-expression-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-log4j/1.3.2.RELEASE/spring-boot-starter-log4j-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/slf4j/jcl-over-slf4j/1.7.13/jcl-over-slf4j-1.7.13.jar, file:/F:/develop_software/Maven/repository/org/slf4j/jul-to-slf4j/1.7.13/jul-to-slf4j-1.7.13.jar, file:/F:/develop_software/Maven/repository/org/slf4j/slf4j-log4j12/1.7.13/slf4j-log4j12-1.7.13.jar, file:/F:/develop_software/Maven/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-thymeleaf/1.3.2.RELEASE/spring-boot-starter-thymeleaf-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/thymeleaf/thymeleaf-spring4/2.1.4.RELEASE/thymeleaf-spring4-2.1.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/thymeleaf/thymeleaf/2.1.4.RELEASE/thymeleaf-2.1.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/ognl/ognl/3.0.8/ognl-3.0.8.jar, file:/F:/develop_software/Maven/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/F:/develop_software/Maven/repository/org/unbescape/unbescape/1.1.0.RELEASE/unbescape-1.1.0.RELEASE.jar, file:/F:/develop_software/Maven/repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/1.3.1/thymeleaf-layout-dialect-1.3.1.jar, file:/F:/develop_software/Maven/repository/org/codehaus/groovy/groovy/2.4.4/groovy-2.4.4.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/core/jackson-databind/2.8.11.1/jackson-databind-2.8.11.1.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.5/jackson-annotations-2.6.5.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/core/jackson-core/2.6.5/jackson-core-2.6.5.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-core_2.10/1.6.3/spark-core_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro-mapred/1.7.7/avro-mapred-1.7.7-hadoop2.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7-tests.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar, file:/F:/develop_software/Maven/repository/com/twitter/chill_2.10/0.5.0/chill_2.10-0.5.0.jar, file:/F:/develop_software/Maven/repository/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.jar, file:/F:/develop_software/Maven/repository/com/esotericsoftware/reflectasm/reflectasm/1.07/reflectasm-1.07-shaded.jar, file:/F:/develop_software/Maven/repository/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar, file:/F:/develop_software/Maven/repository/com/twitter/chill-java/0.5.0/chill-java-0.5.0.jar, file:/F:/develop_software/Maven/repository/org/apache/xbean/xbean-asm5-shaded/4.4/xbean-asm5-shaded-4.4.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-client/2.2.0/hadoop-client-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-common/2.2.0/hadoop-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-math/2.1/commons-math-2.1.jar, file:/F:/develop_software/Maven/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar, file:/F:/develop_software/Maven/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar, file:/F:/develop_software/Maven/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar, file:/F:/develop_software/Maven/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar, file:/F:/develop_software/Maven/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar, file:/F:/develop_software/Maven/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-auth/2.2.0/hadoop-auth-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar, file:/F:/develop_software/Maven/repository/org/tukaani/xz/1.0/xz-1.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-hdfs/2.2.0/hadoop-hdfs-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-app/2.2.0/hadoop-mapreduce-client-app-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-common/2.2.0/hadoop-mapreduce-client-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-client/2.2.0/hadoop-yarn-client-2.2.0.jar, file:/F:/develop_software/Maven/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/F:/develop_software/Maven/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-test-framework/jersey-test-framework-grizzly2/1.9/jersey-test-framework-grizzly2-1.9.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-test-framework/jersey-test-framework-core/1.9/jersey-test-framework-core-1.9.jar, file:/F:/develop_software/Maven/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-client/1.9/jersey-client-1.9.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-grizzly2/1.9/jersey-grizzly2-1.9.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-http/2.1.2/grizzly-http-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-framework/2.1.2/grizzly-framework-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/gmbal/gmbal-api-only/3.0.0-b023/gmbal-api-only-3.0.0-b023.jar, file:/F:/develop_software/Maven/repository/org/glassfish/external/management-api/3.0.0-b012/management-api-3.0.0-b012.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-http-server/2.1.2/grizzly-http-server-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-rcm/2.1.2/grizzly-rcm-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-http-servlet/2.1.2/grizzly-http-servlet-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/javax.servlet/3.1/javax.servlet-3.1.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-json/1.9/jersey-json-1.9.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar, file:/F:/develop_software/Maven/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar, file:/F:/develop_software/Maven/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar, file:/F:/develop_software/Maven/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar, file:/F:/develop_software/Maven/repository/javax/activation/activation/1.1/activation-1.1.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-jaxrs/1.8.3/jackson-jaxrs-1.8.3.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/contribs/jersey-guice/1.9/jersey-guice-1.9.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-server-common/2.2.0/hadoop-yarn-server-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.2.0/hadoop-mapreduce-client-shuffle-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-api/2.2.0/hadoop-yarn-api-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.2.0/hadoop-mapreduce-client-core-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-common/2.2.0/hadoop-yarn-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.2.0/hadoop-mapreduce-client-jobclient-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-annotations/2.2.0/hadoop-annotations-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-network-common_2.10/1.6.3/spark-network-common_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-network-shuffle_2.10/1.6.3/spark-network-shuffle_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-unsafe_2.10/1.6.3/spark-unsafe_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/net/java/dev/jets3t/jets3t/0.7.1/jets3t-0.7.1.jar, file:/F:/develop_software/Maven/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar, file:/F:/develop_software/Maven/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar, file:/F:/develop_software/Maven/repository/org/apache/curator/curator-recipes/2.4.0/curator-recipes-2.4.0.jar, file:/F:/develop_software/Maven/repository/org/apache/curator/curator-framework/2.4.0/curator-framework-2.4.0.jar, file:/F:/develop_software/Maven/repository/org/apache/curator/curator-client/2.4.0/curator-client-2.4.0.jar, file:/F:/develop_software/Maven/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar, file:/F:/develop_software/Maven/repository/jline/jline/0.9.94/jline-0.9.94.jar, file:/F:/develop_software/Maven/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar, file:/F:/develop_software/Maven/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar, file:/F:/develop_software/Maven/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar, file:/F:/develop_software/Maven/repository/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar, file:/F:/develop_software/Maven/repository/com/ning/compress-lzf/1.0.3/compress-lzf-1.0.3.jar, file:/F:/develop_software/Maven/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar, file:/F:/develop_software/Maven/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar, file:/F:/develop_software/Maven/repository/org/roaringbitmap/RoaringBitmap/0.5.11/RoaringBitmap-0.5.11.jar, file:/F:/develop_software/Maven/repository/commons-net/commons-net/2.2/commons-net-2.2.jar, file:/F:/develop_software/Maven/repository/com/typesafe/akka/akka-remote_2.10/2.3.11/akka-remote_2.10-2.3.11.jar, file:/F:/develop_software/Maven/repository/com/typesafe/akka/akka-actor_2.10/2.3.11/akka-actor_2.10-2.3.11.jar, file:/F:/develop_software/Maven/repository/com/typesafe/config/1.2.1/config-1.2.1.jar, file:/F:/develop_software/Maven/repository/io/netty/netty/3.8.0.Final/netty-3.8.0.Final.jar, file:/F:/develop_software/Maven/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar, file:/F:/develop_software/Maven/repository/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.jar, file:/F:/develop_software/Maven/repository/com/typesafe/akka/akka-slf4j_2.10/2.3.11/akka-slf4j_2.10-2.3.11.jar, file:/F:/develop_software/Maven/repository/org/json4s/json4s-jackson_2.10/3.2.10/json4s-jackson_2.10-3.2.10.jar, file:/F:/develop_software/Maven/repository/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.jar, file:/F:/develop_software/Maven/repository/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scalap/2.10.0/scalap-2.10.0.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scala-compiler/2.10.0/scala-compiler-2.10.0.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-server/1.9/jersey-server-1.9.jar, file:/F:/develop_software/Maven/repository/asm/asm/3.1/asm-3.1.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-core/1.9/jersey-core-1.9.jar, file:/F:/develop_software/Maven/repository/org/apache/mesos/mesos/0.21.1/mesos-0.21.1-shaded-protobuf.jar, file:/F:/develop_software/Maven/repository/io/netty/netty-all/4.0.29.Final/netty-all-4.0.29.Final.jar, file:/F:/develop_software/Maven/repository/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-jvm/3.1.2/metrics-jvm-3.1.2.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-json/3.1.2/metrics-json-3.1.2.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-graphite/3.1.2/metrics-graphite-3.1.2.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.4/jackson-module-scala_2.10-2.4.4.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar, file:/F:/develop_software/Maven/repository/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.jar, file:/F:/develop_software/Maven/repository/org/apache/ivy/ivy/2.4.0/ivy-2.4.0.jar, file:/F:/develop_software/Maven/repository/oro/oro/2.0.8/oro-2.0.8.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-client/0.8.2/tachyon-client-0.8.2.jar, file:/F:/develop_software/Maven/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar, file:/F:/develop_software/Maven/repository/commons-io/commons-io/2.4/commons-io-2.4.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-underfs-hdfs/0.8.2/tachyon-underfs-hdfs-0.8.2.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-underfs-s3/0.8.2/tachyon-underfs-s3-0.8.2.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-underfs-local/0.8.2/tachyon-underfs-local-0.8.2.jar, file:/F:/develop_software/Maven/repository/net/razorvine/pyrolite/4.9/pyrolite-4.9.jar, file:/F:/develop_software/Maven/repository/net/sf/py4j/py4j/0.9/py4j-0.9.jar, file:/F:/develop_software/Maven/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-launcher_2.10/1.6.3/spark-launcher_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/ansj/ansj_seg/5.1.1/ansj_seg-5.1.1.jar, file:/F:/develop_software/Maven/repository/org/nlpcn/nlp-lang/1.7.2/nlp-lang-1.7.2.jar, file:/D:/IDEA/IntelliJ%20IDEA%202018.3/lib/idea_rt.jar]
+2018-12-07 15:28:59,080  INFO SparkdemoApplication:48 - Starting SparkdemoApplication on BayMin--PC with PID 14712 (F:\IDEA-WorkSpace\sparkdemo\target\classes started by lenovo in F:\IDEA-WorkSpace\sparkdemo)
+2018-12-07 15:28:59,083  INFO SparkdemoApplication:666 - No active profile set, falling back to default profiles: default
+2018-12-07 15:28:59,298  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2018-12-07 15:28:59,376  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6385cb26: startup date [Fri Dec 07 15:28:59 CST 2018]; root of context hierarchy
+2018-12-07 15:29:00,053  INFO DefaultListableBeanFactory:839 - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-12-07 15:29:00,320  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-07 15:29:00,748  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8080 (http)
+2018-12-07 15:29:00,763  INFO StandardService:180 - Starting service Tomcat
+2018-12-07 15:29:00,764  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-12-07 15:29:00,940  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2018-12-07 15:29:00,940  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1564 ms
+2018-12-07 15:29:01,285  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-07 15:29:01,296  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-07 15:29:01,297  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-07 15:29:01,297  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-07 15:29:01,297  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-07 15:29:01,631  INFO SparkContext:58 - Running Spark version 1.6.3
+2018-12-07 15:29:01,870  INFO SecurityManager:58 - Changing view acls to: lenovo,root
+2018-12-07 15:29:01,873  INFO SecurityManager:58 - Changing modify acls to: lenovo,root
+2018-12-07 15:29:01,874  INFO SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(lenovo, root); users with modify permissions: Set(lenovo, root)
+2018-12-07 15:29:03,144  INFO Utils:58 - Successfully started service 'sparkDriver' on port 7949.
+2018-12-07 15:29:03,535  INFO Slf4jLogger:80 - Slf4jLogger started
+2018-12-07 15:29:03,603  INFO Remoting:74 - Starting remoting
+2018-12-07 15:29:03,790  INFO Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.216.1:7962]
+2018-12-07 15:29:03,797  INFO Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 7962.
+2018-12-07 15:29:03,814  INFO SparkEnv:58 - Registering MapOutputTracker
+2018-12-07 15:29:03,838  INFO SparkEnv:58 - Registering BlockManagerMaster
+2018-12-07 15:29:03,845  INFO DiskBlockManager:58 - Created local directory at C:\Users\lenovo\AppData\Local\Temp\blockmgr-0da060b0-fd1a-401a-8bb9-ba861a4e6d9b
+2018-12-07 15:29:03,864  INFO MemoryStore:58 - MemoryStore started with capacity 2.4 GB
+2018-12-07 15:29:03,918  INFO SparkEnv:58 - Registering OutputCommitCoordinator
+2018-12-07 15:29:04,073  INFO Server:272 - jetty-8.y.z-SNAPSHOT
+2018-12-07 15:29:04,120  INFO AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2018-12-07 15:29:04,122  INFO Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2018-12-07 15:29:04,126  INFO SparkUI:58 - Started SparkUI at http://192.168.216.1:4040
+2018-12-07 15:29:04,206  INFO Executor:58 - Starting executor ID driver on host localhost
+2018-12-07 15:29:04,239  INFO Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7971.
+2018-12-07 15:29:04,240  INFO NettyBlockTransferService:58 - Server created on 7971
+2018-12-07 15:29:04,242  INFO BlockManagerMaster:58 - Trying to register BlockManager
+2018-12-07 15:29:04,245  INFO BlockManagerMasterEndpoint:58 - Registering block manager localhost:7971 with 2.4 GB RAM, BlockManagerId(driver, localhost, 7971)
+2018-12-07 15:29:04,247  INFO BlockManagerMaster:58 - Registered BlockManager
+2018-12-07 15:29:04,542  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6385cb26: startup date [Fri Dec 07 15:28:59 CST 2018]; root of context hierarchy
+2018-12-07 15:29:04,608  INFO RequestMappingHandlerMapping:527 - Mapped "{[/spark/wordCount]}" onto public java.util.Map<java.lang.String, java.lang.Integer> com.bay.sparkspringboot.sparkdemo.controller.WordCountController.wordCount()
+2018-12-07 15:29:04,614  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-07 15:29:04,614  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-07 15:29:04,650  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 15:29:04,650  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 15:29:04,691  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 15:29:04,733  WARN ThymeleafAutoConfiguration:90 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-12-07 15:29:05,154  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-12-07 15:29:05,181  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-07 15:29:05,193  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8080"]
+2018-12-07 15:29:05,194  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-12-07 15:29:05,214  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8080 (http)
+2018-12-07 15:29:05,219  INFO SparkdemoApplication:57 - Started SparkdemoApplication in 6.468 seconds (JVM running for 8.294)
+2018-12-07 15:58:39,764  INFO SparkdemoApplication:48 - Starting SparkdemoApplication on BayMin--PC with PID 9268 (F:\IDEA-WorkSpace\sparkdemo\target\classes started by lenovo in F:\IDEA-WorkSpace\sparkdemo)
+2018-12-07 15:58:39,768  INFO SparkdemoApplication:666 - No active profile set, falling back to default profiles: default
+2018-12-07 15:58:39,987  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2018-12-07 15:58:40,059  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 15:58:40 CST 2018]; root of context hierarchy
+2018-12-07 15:58:40,722  INFO DefaultListableBeanFactory:839 - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-12-07 15:58:40,940  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-07 15:58:41,441  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8008 (http)
+2018-12-07 15:58:41,456  INFO StandardService:180 - Starting service Tomcat
+2018-12-07 15:58:41,459  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-12-07 15:58:41,627  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2018-12-07 15:58:41,628  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1568 ms
+2018-12-07 15:58:41,967  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-07 15:58:41,972  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-07 15:58:41,973  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-07 15:58:41,973  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-07 15:58:41,973  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-07 15:58:42,309  INFO SparkContext:58 - Running Spark version 1.6.3
+2018-12-07 15:58:42,535  INFO SecurityManager:58 - Changing view acls to: lenovo,root
+2018-12-07 15:58:42,538  INFO SecurityManager:58 - Changing modify acls to: lenovo,root
+2018-12-07 15:58:42,540  INFO SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(lenovo, root); users with modify permissions: Set(lenovo, root)
+2018-12-07 15:58:43,752  INFO Utils:58 - Successfully started service 'sparkDriver' on port 9242.
+2018-12-07 15:58:44,143  INFO Slf4jLogger:80 - Slf4jLogger started
+2018-12-07 15:58:44,199  INFO Remoting:74 - Starting remoting
+2018-12-07 15:58:44,381  INFO Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.216.1:9255]
+2018-12-07 15:58:44,391  INFO Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 9255.
+2018-12-07 15:58:44,407  INFO SparkEnv:58 - Registering MapOutputTracker
+2018-12-07 15:58:44,430  INFO SparkEnv:58 - Registering BlockManagerMaster
+2018-12-07 15:58:44,438  INFO DiskBlockManager:58 - Created local directory at C:\Users\lenovo\AppData\Local\Temp\blockmgr-2de0e0a9-d40e-47c5-b734-95cded8fd36f
+2018-12-07 15:58:44,455  INFO MemoryStore:58 - MemoryStore started with capacity 2.4 GB
+2018-12-07 15:58:44,508  INFO SparkEnv:58 - Registering OutputCommitCoordinator
+2018-12-07 15:58:44,648  INFO Server:272 - jetty-8.y.z-SNAPSHOT
+2018-12-07 15:58:44,695  INFO AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2018-12-07 15:58:44,697  INFO Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2018-12-07 15:58:44,699  INFO SparkUI:58 - Started SparkUI at http://192.168.216.1:4040
+2018-12-07 15:58:44,776  INFO Executor:58 - Starting executor ID driver on host localhost
+2018-12-07 15:58:44,809  INFO Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 9264.
+2018-12-07 15:58:44,809  INFO NettyBlockTransferService:58 - Server created on 9264
+2018-12-07 15:58:44,811  INFO BlockManagerMaster:58 - Trying to register BlockManager
+2018-12-07 15:58:44,814  INFO BlockManagerMasterEndpoint:58 - Registering block manager localhost:9264 with 2.4 GB RAM, BlockManagerId(driver, localhost, 9264)
+2018-12-07 15:58:44,817  INFO BlockManagerMaster:58 - Registered BlockManager
+2018-12-07 15:58:45,091  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 15:58:40 CST 2018]; root of context hierarchy
+2018-12-07 15:58:45,153  INFO RequestMappingHandlerMapping:527 - Mapped "{[/spark/wordCount]}" onto public java.util.Map<java.lang.String, java.lang.Integer> com.bay.sparkspringboot.sparkdemo.controller.WordCountController.wordCount()
+2018-12-07 15:58:45,158  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-07 15:58:45,159  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-07 15:58:45,190  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 15:58:45,191  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 15:58:45,240  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 15:58:45,279  WARN ThymeleafAutoConfiguration:90 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-12-07 15:58:45,657  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-12-07 15:58:45,686  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8008"]
+2018-12-07 15:58:45,694  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8008"]
+2018-12-07 15:58:45,695  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-12-07 15:58:45,713  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8008 (http)
+2018-12-07 15:58:45,719  INFO SparkdemoApplication:57 - Started SparkdemoApplication in 6.257 seconds (JVM running for 7.844)
+2018-12-07 15:59:07,650  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-07 15:59:07,651  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-07 15:59:07,673  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-12-07 15:59:08,477  INFO MemoryStore:58 - Block broadcast_0 stored as values in memory (estimated size 107.7 KB, free 2.4 GB)
+2018-12-07 15:59:08,509  INFO MemoryStore:58 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KB, free 2.4 GB)
+2018-12-07 15:59:08,514  INFO BlockManagerInfo:58 - Added broadcast_0_piece0 in memory on localhost:9264 (size: 9.8 KB, free: 2.4 GB)
+2018-12-07 15:59:08,517  INFO SparkContext:58 - Created broadcast 0 from textFile at WordCountService.scala:23
+2018-12-07 15:59:09,054  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 15:59:09,380  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:24
+2018-12-07 15:59:09,406  INFO DAGScheduler:58 - Registering RDD 3 (map at WordCountService.scala:24)
+2018-12-07 15:59:09,408  INFO DAGScheduler:58 - Got job 0 (collectAsMap at WordCountService.scala:24) with 1 output partitions
+2018-12-07 15:59:09,408  INFO DAGScheduler:58 - Final stage: ResultStage 1 (collectAsMap at WordCountService.scala:24)
+2018-12-07 15:59:09,409  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 0)
+2018-12-07 15:59:09,411  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 0)
+2018-12-07 15:59:09,436  INFO DAGScheduler:58 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at WordCountService.scala:24), which has no missing parents
+2018-12-07 15:59:09,468  INFO MemoryStore:58 - Block broadcast_1 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 15:59:09,471  INFO MemoryStore:58 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 15:59:09,472  INFO BlockManagerInfo:58 - Added broadcast_1_piece0 in memory on localhost:9264 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 15:59:09,473  INFO SparkContext:58 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2018-12-07 15:59:09,479  INFO DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at WordCountService.scala:24)
+2018-12-07 15:59:09,481  INFO TaskSchedulerImpl:58 - Adding task set 0.0 with 1 tasks
+2018-12-07 15:59:09,536  INFO TaskSetManager:58 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,ANY, 2127 bytes)
+2018-12-07 15:59:09,540  INFO Executor:58 - Running task 0.0 in stage 0.0 (TID 0)
+2018-12-07 15:59:09,568  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/blsmy.txt:0+1051088
+2018-12-07 15:59:09,588  INFO deprecation:840 - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2018-12-07 15:59:09,589  INFO deprecation:840 - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2018-12-07 15:59:09,589  INFO deprecation:840 - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2018-12-07 15:59:09,589  INFO deprecation:840 - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+2018-12-07 15:59:09,589  INFO deprecation:840 - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2018-12-07 15:59:10,667  INFO Executor:58 - Finished task 0.0 in stage 0.0 (TID 0). 2253 bytes result sent to driver
+2018-12-07 15:59:10,674  INFO TaskSetManager:58 - Finished task 0.0 in stage 0.0 (TID 0) in 1156 ms on localhost (1/1)
+2018-12-07 15:59:10,677  INFO TaskSchedulerImpl:58 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-12-07 15:59:10,685  INFO DAGScheduler:58 - ShuffleMapStage 0 (map at WordCountService.scala:24) finished in 1.186 s
+2018-12-07 15:59:10,686  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 15:59:10,686  INFO DAGScheduler:58 - running: Set()
+2018-12-07 15:59:10,686  INFO DAGScheduler:58 - waiting: Set(ResultStage 1)
+2018-12-07 15:59:10,687  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 15:59:10,688  INFO DAGScheduler:58 - Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at WordCountService.scala:24), which has no missing parents
+2018-12-07 15:59:10,692  INFO MemoryStore:58 - Block broadcast_2 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 15:59:10,694  INFO MemoryStore:58 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 1614.0 B, free 2.4 GB)
+2018-12-07 15:59:10,700  INFO BlockManagerInfo:58 - Added broadcast_2_piece0 in memory on localhost:9264 (size: 1614.0 B, free: 2.4 GB)
+2018-12-07 15:59:10,702  INFO SparkContext:58 - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+2018-12-07 15:59:10,704  INFO DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at WordCountService.scala:24)
+2018-12-07 15:59:10,704  INFO TaskSchedulerImpl:58 - Adding task set 1.0 with 1 tasks
+2018-12-07 15:59:10,707  INFO TaskSetManager:58 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 15:59:10,708  INFO Executor:58 - Running task 0.0 in stage 1.0 (TID 1)
+2018-12-07 15:59:10,725  INFO ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2018-12-07 15:59:10,727  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 4 ms
+2018-12-07 15:59:10,956  INFO Executor:58 - Finished task 0.0 in stage 1.0 (TID 1). 667219 bytes result sent to driver
+2018-12-07 15:59:10,978  INFO TaskSetManager:58 - Finished task 0.0 in stage 1.0 (TID 1) in 273 ms on localhost (1/1)
+2018-12-07 15:59:10,979  INFO DAGScheduler:58 - ResultStage 1 (collectAsMap at WordCountService.scala:24) finished in 0.273 s
+2018-12-07 15:59:10,980  INFO TaskSchedulerImpl:58 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-12-07 15:59:10,990  INFO DAGScheduler:58 - Job 0 finished: collectAsMap at WordCountService.scala:24, took 1.608995 s
+2018-12-07 16:25:35,915  INFO SparkdemoApplication:48 - Starting SparkdemoApplication on BayMin--PC with PID 1736 (F:\IDEA-WorkSpace\sparkdemo\target\classes started by lenovo in F:\IDEA-WorkSpace\sparkdemo)
+2018-12-07 16:25:35,940  INFO SparkdemoApplication:666 - No active profile set, falling back to default profiles: default
+2018-12-07 16:25:36,167  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2018-12-07 16:25:36,288  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 16:25:36 CST 2018]; root of context hierarchy
+2018-12-07 16:25:37,063  INFO DefaultListableBeanFactory:839 - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-12-07 16:25:37,416  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-07 16:25:37,957  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8008 (http)
+2018-12-07 16:25:37,968  INFO StandardService:180 - Starting service Tomcat
+2018-12-07 16:25:37,971  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-12-07 16:25:38,177  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2018-12-07 16:25:38,177  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1889 ms
+2018-12-07 16:25:38,571  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-07 16:25:38,582  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-07 16:25:38,584  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-07 16:25:38,586  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-07 16:25:38,586  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-07 16:25:39,038  INFO SparkContext:58 - Running Spark version 1.6.3
+2018-12-07 16:25:39,417 ERROR SparkContext:95 - Error initializing SparkContext.
+org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:401)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig.sparkContext(ApplicationConfig.java:31)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig$$EnhancerBySpringCGLIB$$4710ba30.CGLIB$sparkContext$1(<generated>)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig$$EnhancerBySpringCGLIB$$4710ba30$$FastClassBySpringCGLIB$$52b9aa90.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig$$EnhancerBySpringCGLIB$$4710ba30.sparkContext(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:512)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bay.sparkspringboot.sparkdemo.SparkdemoApplication.main(SparkdemoApplication.java:12)
+2018-12-07 16:25:39,460  INFO SparkContext:58 - Successfully stopped SparkContext
+2018-12-07 16:25:39,462  WARN AnnotationConfigEmbeddedWebApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wordCountController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wordCountService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final org.apache.spark.SparkContext com.bay.sparkspringboot.sparkdemo.service.WordCountService.sc; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sparkContext' defined in class path resource [com/bay/sparkspringboot/sparkdemo/config/ApplicationConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.spark.SparkContext]: Factory method 'sparkContext' threw exception; nested exception is org.apache.spark.SparkException: A master URL must be set in your configuration
+2018-12-07 16:25:39,469  INFO StandardService:180 - Stopping service Tomcat
+2018-12-07 16:25:39,475 ERROR SpringApplication:827 - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wordCountController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wordCountService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final org.apache.spark.SparkContext com.bay.sparkspringboot.sparkdemo.service.WordCountService.sc; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sparkContext' defined in class path resource [com/bay/sparkspringboot/sparkdemo/config/ApplicationConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.spark.SparkContext]: Factory method 'sparkContext' threw exception; nested exception is org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bay.sparkspringboot.sparkdemo.SparkdemoApplication.main(SparkdemoApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wordCountService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final org.apache.spark.SparkContext com.bay.sparkspringboot.sparkdemo.service.WordCountService.sc; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sparkContext' defined in class path resource [com/bay/sparkspringboot/sparkdemo/config/ApplicationConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.spark.SparkContext]: Factory method 'sparkContext' threw exception; nested exception is org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:512)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	... 17 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private final org.apache.spark.SparkContext com.bay.sparkspringboot.sparkdemo.service.WordCountService.sc; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sparkContext' defined in class path resource [com/bay/sparkspringboot/sparkdemo/config/ApplicationConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.spark.SparkContext]: Factory method 'sparkContext' threw exception; nested exception is org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sparkContext' defined in class path resource [com/bay/sparkspringboot/sparkdemo/config/ApplicationConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.spark.SparkContext]: Factory method 'sparkContext' threw exception; nested exception is org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 32 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.spark.SparkContext]: Factory method 'sparkContext' threw exception; nested exception is org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 44 more
+Caused by: org.apache.spark.SparkException: A master URL must be set in your configuration
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:401)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig.sparkContext(ApplicationConfig.java:31)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig$$EnhancerBySpringCGLIB$$4710ba30.CGLIB$sparkContext$1(<generated>)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig$$EnhancerBySpringCGLIB$$4710ba30$$FastClassBySpringCGLIB$$52b9aa90.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bay.sparkspringboot.sparkdemo.config.ApplicationConfig$$EnhancerBySpringCGLIB$$4710ba30.sparkContext(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 45 more
+2018-12-07 16:25:39,484  INFO ClasspathLoggingApplicationListener:57 - Application failed to start with classpath: [file:/G:/java-bd/jre/lib/charsets.jar, file:/G:/java-bd/jre/lib/deploy.jar, file:/G:/java-bd/jre/lib/ext/access-bridge-64.jar, file:/G:/java-bd/jre/lib/ext/cldrdata.jar, file:/G:/java-bd/jre/lib/ext/dnsns.jar, file:/G:/java-bd/jre/lib/ext/jaccess.jar, file:/G:/java-bd/jre/lib/ext/jfxrt.jar, file:/G:/java-bd/jre/lib/ext/localedata.jar, file:/G:/java-bd/jre/lib/ext/nashorn.jar, file:/G:/java-bd/jre/lib/ext/sunec.jar, file:/G:/java-bd/jre/lib/ext/sunjce_provider.jar, file:/G:/java-bd/jre/lib/ext/sunmscapi.jar, file:/G:/java-bd/jre/lib/ext/sunpkcs11.jar, file:/G:/java-bd/jre/lib/ext/zipfs.jar, file:/G:/java-bd/jre/lib/javaws.jar, file:/G:/java-bd/jre/lib/jce.jar, file:/G:/java-bd/jre/lib/jfr.jar, file:/G:/java-bd/jre/lib/jfxswt.jar, file:/G:/java-bd/jre/lib/jsse.jar, file:/G:/java-bd/jre/lib/management-agent.jar, file:/G:/java-bd/jre/lib/plugin.jar, file:/G:/java-bd/jre/lib/resources.jar, file:/G:/java-bd/jre/lib/rt.jar, file:/F:/IDEA-WorkSpace/sparkdemo/target/classes/, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-web/1.3.2.RELEASE/spring-boot-starter-web-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter/1.3.2.RELEASE/spring-boot-starter-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot/1.3.2.RELEASE/spring-boot-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.2.RELEASE/spring-boot-autoconfigure-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-tomcat/1.3.2.RELEASE/spring-boot-starter-tomcat-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-core/8.0.30/tomcat-embed-core-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-el/8.0.30/tomcat-embed-el-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/8.0.30/tomcat-embed-logging-juli-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.30/tomcat-embed-websocket-8.0.30.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-validation/1.3.2.RELEASE/spring-boot-starter-validation-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/hibernate/hibernate-validator/5.2.2.Final/hibernate-validator-5.2.2.Final.jar, file:/F:/develop_software/Maven/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar, file:/F:/develop_software/Maven/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-beans/4.2.4.RELEASE/spring-beans-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-context/4.2.4.RELEASE/spring-context-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-expression/4.2.4.RELEASE/spring-expression-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar, file:/F:/develop_software/Maven/repository/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-log4j/1.3.2.RELEASE/spring-boot-starter-log4j-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/slf4j/jcl-over-slf4j/1.7.13/jcl-over-slf4j-1.7.13.jar, file:/F:/develop_software/Maven/repository/org/slf4j/jul-to-slf4j/1.7.13/jul-to-slf4j-1.7.13.jar, file:/F:/develop_software/Maven/repository/org/slf4j/slf4j-log4j12/1.7.13/slf4j-log4j12-1.7.13.jar, file:/F:/develop_software/Maven/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar, file:/F:/develop_software/Maven/repository/org/springframework/boot/spring-boot-starter-thymeleaf/1.3.2.RELEASE/spring-boot-starter-thymeleaf-1.3.2.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/thymeleaf/thymeleaf-spring4/2.1.4.RELEASE/thymeleaf-spring4-2.1.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/org/thymeleaf/thymeleaf/2.1.4.RELEASE/thymeleaf-2.1.4.RELEASE.jar, file:/F:/develop_software/Maven/repository/ognl/ognl/3.0.8/ognl-3.0.8.jar, file:/F:/develop_software/Maven/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/F:/develop_software/Maven/repository/org/unbescape/unbescape/1.1.0.RELEASE/unbescape-1.1.0.RELEASE.jar, file:/F:/develop_software/Maven/repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/1.3.1/thymeleaf-layout-dialect-1.3.1.jar, file:/F:/develop_software/Maven/repository/org/codehaus/groovy/groovy/2.4.4/groovy-2.4.4.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/core/jackson-databind/2.4.4/jackson-databind-2.4.4.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.5/jackson-annotations-2.6.5.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/core/jackson-core/2.6.5/jackson-core-2.6.5.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-core_2.10/1.6.3/spark-core_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro-mapred/1.7.7/avro-mapred-1.7.7-hadoop2.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar, file:/F:/develop_software/Maven/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7-tests.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar, file:/F:/develop_software/Maven/repository/com/twitter/chill_2.10/0.5.0/chill_2.10-0.5.0.jar, file:/F:/develop_software/Maven/repository/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.jar, file:/F:/develop_software/Maven/repository/com/esotericsoftware/reflectasm/reflectasm/1.07/reflectasm-1.07-shaded.jar, file:/F:/develop_software/Maven/repository/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar, file:/F:/develop_software/Maven/repository/com/twitter/chill-java/0.5.0/chill-java-0.5.0.jar, file:/F:/develop_software/Maven/repository/org/apache/xbean/xbean-asm5-shaded/4.4/xbean-asm5-shaded-4.4.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-client/2.2.0/hadoop-client-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-common/2.2.0/hadoop-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-math/2.1/commons-math-2.1.jar, file:/F:/develop_software/Maven/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar, file:/F:/develop_software/Maven/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar, file:/F:/develop_software/Maven/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar, file:/F:/develop_software/Maven/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar, file:/F:/develop_software/Maven/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar, file:/F:/develop_software/Maven/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-auth/2.2.0/hadoop-auth-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar, file:/F:/develop_software/Maven/repository/org/tukaani/xz/1.0/xz-1.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-hdfs/2.2.0/hadoop-hdfs-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-app/2.2.0/hadoop-mapreduce-client-app-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-common/2.2.0/hadoop-mapreduce-client-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-client/2.2.0/hadoop-yarn-client-2.2.0.jar, file:/F:/develop_software/Maven/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/F:/develop_software/Maven/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-test-framework/jersey-test-framework-grizzly2/1.9/jersey-test-framework-grizzly2-1.9.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-test-framework/jersey-test-framework-core/1.9/jersey-test-framework-core-1.9.jar, file:/F:/develop_software/Maven/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-client/1.9/jersey-client-1.9.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-grizzly2/1.9/jersey-grizzly2-1.9.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-http/2.1.2/grizzly-http-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-framework/2.1.2/grizzly-framework-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/gmbal/gmbal-api-only/3.0.0-b023/gmbal-api-only-3.0.0-b023.jar, file:/F:/develop_software/Maven/repository/org/glassfish/external/management-api/3.0.0-b012/management-api-3.0.0-b012.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-http-server/2.1.2/grizzly-http-server-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-rcm/2.1.2/grizzly-rcm-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/grizzly/grizzly-http-servlet/2.1.2/grizzly-http-servlet-2.1.2.jar, file:/F:/develop_software/Maven/repository/org/glassfish/javax.servlet/3.1/javax.servlet-3.1.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-json/1.9/jersey-json-1.9.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar, file:/F:/develop_software/Maven/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar, file:/F:/develop_software/Maven/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar, file:/F:/develop_software/Maven/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar, file:/F:/develop_software/Maven/repository/javax/activation/activation/1.1/activation-1.1.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-jaxrs/1.8.3/jackson-jaxrs-1.8.3.jar, file:/F:/develop_software/Maven/repository/org/codehaus/jackson/jackson-xc/1.8.3/jackson-xc-1.8.3.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/contribs/jersey-guice/1.9/jersey-guice-1.9.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-server-common/2.2.0/hadoop-yarn-server-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.2.0/hadoop-mapreduce-client-shuffle-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-api/2.2.0/hadoop-yarn-api-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.2.0/hadoop-mapreduce-client-core-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-yarn-common/2.2.0/hadoop-yarn-common-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.2.0/hadoop-mapreduce-client-jobclient-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/hadoop/hadoop-annotations/2.2.0/hadoop-annotations-2.2.0.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-network-common_2.10/1.6.3/spark-network-common_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-network-shuffle_2.10/1.6.3/spark-network-shuffle_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-unsafe_2.10/1.6.3/spark-unsafe_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/net/java/dev/jets3t/jets3t/0.7.1/jets3t-0.7.1.jar, file:/F:/develop_software/Maven/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar, file:/F:/develop_software/Maven/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar, file:/F:/develop_software/Maven/repository/org/apache/curator/curator-recipes/2.4.0/curator-recipes-2.4.0.jar, file:/F:/develop_software/Maven/repository/org/apache/curator/curator-framework/2.4.0/curator-framework-2.4.0.jar, file:/F:/develop_software/Maven/repository/org/apache/curator/curator-client/2.4.0/curator-client-2.4.0.jar, file:/F:/develop_software/Maven/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar, file:/F:/develop_software/Maven/repository/jline/jline/0.9.94/jline-0.9.94.jar, file:/F:/develop_software/Maven/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar, file:/F:/develop_software/Maven/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar, file:/F:/develop_software/Maven/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar, file:/F:/develop_software/Maven/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar, file:/F:/develop_software/Maven/repository/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar, file:/F:/develop_software/Maven/repository/com/ning/compress-lzf/1.0.3/compress-lzf-1.0.3.jar, file:/F:/develop_software/Maven/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar, file:/F:/develop_software/Maven/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar, file:/F:/develop_software/Maven/repository/org/roaringbitmap/RoaringBitmap/0.5.11/RoaringBitmap-0.5.11.jar, file:/F:/develop_software/Maven/repository/commons-net/commons-net/2.2/commons-net-2.2.jar, file:/F:/develop_software/Maven/repository/com/typesafe/akka/akka-remote_2.10/2.3.11/akka-remote_2.10-2.3.11.jar, file:/F:/develop_software/Maven/repository/com/typesafe/akka/akka-actor_2.10/2.3.11/akka-actor_2.10-2.3.11.jar, file:/F:/develop_software/Maven/repository/com/typesafe/config/1.2.1/config-1.2.1.jar, file:/F:/develop_software/Maven/repository/io/netty/netty/3.8.0.Final/netty-3.8.0.Final.jar, file:/F:/develop_software/Maven/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar, file:/F:/develop_software/Maven/repository/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.jar, file:/F:/develop_software/Maven/repository/com/typesafe/akka/akka-slf4j_2.10/2.3.11/akka-slf4j_2.10-2.3.11.jar, file:/F:/develop_software/Maven/repository/org/json4s/json4s-jackson_2.10/3.2.10/json4s-jackson_2.10-3.2.10.jar, file:/F:/develop_software/Maven/repository/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.jar, file:/F:/develop_software/Maven/repository/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scalap/2.10.0/scalap-2.10.0.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scala-compiler/2.10.0/scala-compiler-2.10.0.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-server/1.9/jersey-server-1.9.jar, file:/F:/develop_software/Maven/repository/asm/asm/3.1/asm-3.1.jar, file:/F:/develop_software/Maven/repository/com/sun/jersey/jersey-core/1.9/jersey-core-1.9.jar, file:/F:/develop_software/Maven/repository/org/apache/mesos/mesos/0.21.1/mesos-0.21.1-shaded-protobuf.jar, file:/F:/develop_software/Maven/repository/io/netty/netty-all/4.0.29.Final/netty-all-4.0.29.Final.jar, file:/F:/develop_software/Maven/repository/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-jvm/3.1.2/metrics-jvm-3.1.2.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-json/3.1.2/metrics-json-3.1.2.jar, file:/F:/develop_software/Maven/repository/io/dropwizard/metrics/metrics-graphite/3.1.2/metrics-graphite-3.1.2.jar, file:/F:/develop_software/Maven/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.4/jackson-module-scala_2.10-2.4.4.jar, file:/F:/develop_software/Maven/repository/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar, file:/F:/develop_software/Maven/repository/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.jar, file:/F:/develop_software/Maven/repository/org/apache/ivy/ivy/2.4.0/ivy-2.4.0.jar, file:/F:/develop_software/Maven/repository/oro/oro/2.0.8/oro-2.0.8.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-client/0.8.2/tachyon-client-0.8.2.jar, file:/F:/develop_software/Maven/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar, file:/F:/develop_software/Maven/repository/commons-io/commons-io/2.4/commons-io-2.4.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-underfs-hdfs/0.8.2/tachyon-underfs-hdfs-0.8.2.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-underfs-s3/0.8.2/tachyon-underfs-s3-0.8.2.jar, file:/F:/develop_software/Maven/repository/org/tachyonproject/tachyon-underfs-local/0.8.2/tachyon-underfs-local-0.8.2.jar, file:/F:/develop_software/Maven/repository/net/razorvine/pyrolite/4.9/pyrolite-4.9.jar, file:/F:/develop_software/Maven/repository/net/sf/py4j/py4j/0.9/py4j-0.9.jar, file:/F:/develop_software/Maven/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar, file:/F:/develop_software/Maven/repository/org/apache/spark/spark-launcher_2.10/1.6.3/spark-launcher_2.10-1.6.3.jar, file:/F:/develop_software/Maven/repository/org/ansj/ansj_seg/5.1.1/ansj_seg-5.1.1.jar, file:/F:/develop_software/Maven/repository/org/nlpcn/nlp-lang/1.7.2/nlp-lang-1.7.2.jar, file:/D:/IDEA/IntelliJ%20IDEA%202018.3/lib/idea_rt.jar]
+2018-12-07 17:25:31,832  INFO SparkdemoApplication:48 - Starting SparkdemoApplication on BayMin--PC with PID 16016 (F:\IDEA-WorkSpace\sparkdemo\target\classes started by lenovo in F:\IDEA-WorkSpace\sparkdemo)
+2018-12-07 17:25:31,872  INFO SparkdemoApplication:666 - No active profile set, falling back to default profiles: default
+2018-12-07 17:25:33,575  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2018-12-07 17:25:33,804  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 17:25:33 CST 2018]; root of context hierarchy
+2018-12-07 17:25:35,328  INFO DefaultListableBeanFactory:839 - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-12-07 17:25:35,742  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-07 17:25:36,728  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8008 (http)
+2018-12-07 17:25:36,782  INFO StandardService:180 - Starting service Tomcat
+2018-12-07 17:25:36,783  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-12-07 17:25:37,103  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2018-12-07 17:25:37,104  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 3300 ms
+2018-12-07 17:25:37,614  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-07 17:25:37,618  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-07 17:25:37,619  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-07 17:25:37,619  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-07 17:25:37,620  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-07 17:25:38,182  INFO SparkContext:58 - Running Spark version 1.6.3
+2018-12-07 17:25:39,015  INFO SecurityManager:58 - Changing view acls to: lenovo,root
+2018-12-07 17:25:39,028  INFO SecurityManager:58 - Changing modify acls to: lenovo,root
+2018-12-07 17:25:39,030  INFO SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(lenovo, root); users with modify permissions: Set(lenovo, root)
+2018-12-07 17:25:41,237  INFO Utils:58 - Successfully started service 'sparkDriver' on port 13224.
+2018-12-07 17:25:42,066  INFO Slf4jLogger:80 - Slf4jLogger started
+2018-12-07 17:25:42,361  INFO Remoting:74 - Starting remoting
+2018-12-07 17:25:42,959  INFO Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.216.1:13237]
+2018-12-07 17:25:42,979  INFO Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 13237.
+2018-12-07 17:25:43,047  INFO SparkEnv:58 - Registering MapOutputTracker
+2018-12-07 17:25:43,120  INFO SparkEnv:58 - Registering BlockManagerMaster
+2018-12-07 17:25:43,138  INFO DiskBlockManager:58 - Created local directory at C:\Users\lenovo\AppData\Local\Temp\blockmgr-e13cc8f5-fda3-4c67-af7a-4b411cecf004
+2018-12-07 17:25:43,228  INFO MemoryStore:58 - MemoryStore started with capacity 2.4 GB
+2018-12-07 17:25:43,406  INFO SparkEnv:58 - Registering OutputCommitCoordinator
+2018-12-07 17:25:43,754  INFO Server:272 - jetty-8.y.z-SNAPSHOT
+2018-12-07 17:25:43,820  INFO AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2018-12-07 17:25:43,821  INFO Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2018-12-07 17:25:43,824  INFO SparkUI:58 - Started SparkUI at http://192.168.216.1:4040
+2018-12-07 17:25:44,101  INFO Executor:58 - Starting executor ID driver on host localhost
+2018-12-07 17:25:44,174  INFO Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 13246.
+2018-12-07 17:25:44,176  INFO NettyBlockTransferService:58 - Server created on 13246
+2018-12-07 17:25:44,179  INFO BlockManagerMaster:58 - Trying to register BlockManager
+2018-12-07 17:25:44,194  INFO BlockManagerMasterEndpoint:58 - Registering block manager localhost:13246 with 2.4 GB RAM, BlockManagerId(driver, localhost, 13246)
+2018-12-07 17:25:44,199  INFO BlockManagerMaster:58 - Registered BlockManager
+2018-12-07 17:25:44,853  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 17:25:33 CST 2018]; root of context hierarchy
+2018-12-07 17:25:44,932  INFO RequestMappingHandlerMapping:527 - Mapped "{[/spark/wordCount]}" onto public java.util.Map<java.lang.String, java.lang.Integer> com.bay.sparkspringboot.sparkdemo.controller.WordCountController.wordCount()
+2018-12-07 17:25:44,938  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-07 17:25:44,939  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-07 17:25:44,967  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 17:25:44,968  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 17:25:45,013  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 17:25:45,053  WARN ThymeleafAutoConfiguration:90 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-12-07 17:25:45,802  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-12-07 17:25:45,910  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8008"]
+2018-12-07 17:25:45,918  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8008"]
+2018-12-07 17:25:45,924  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-12-07 17:25:45,960  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8008 (http)
+2018-12-07 17:25:46,004  INFO SparkdemoApplication:57 - Started SparkdemoApplication in 15.966 seconds (JVM running for 20.914)
+2018-12-07 17:26:19,266  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-07 17:26:19,268  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-07 17:26:19,350  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 82 ms
+2018-12-07 17:26:23,256  INFO MemoryStore:58 - Block broadcast_0 stored as values in memory (estimated size 107.7 KB, free 2.4 GB)
+2018-12-07 17:26:23,460  INFO MemoryStore:58 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KB, free 2.4 GB)
+2018-12-07 17:26:23,487  INFO BlockManagerInfo:58 - Added broadcast_0_piece0 in memory on localhost:13246 (size: 9.8 KB, free: 2.4 GB)
+2018-12-07 17:26:23,531  INFO SparkContext:58 - Created broadcast 0 from textFile at WordCountService.scala:23
+2018-12-07 17:26:26,468  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:26:26,876  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:24
+2018-12-07 17:26:27,067  INFO DAGScheduler:58 - Registering RDD 3 (map at WordCountService.scala:24)
+2018-12-07 17:26:27,092  INFO DAGScheduler:58 - Got job 0 (collectAsMap at WordCountService.scala:24) with 1 output partitions
+2018-12-07 17:26:27,094  INFO DAGScheduler:58 - Final stage: ResultStage 1 (collectAsMap at WordCountService.scala:24)
+2018-12-07 17:26:27,096  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 0)
+2018-12-07 17:26:27,098  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 0)
+2018-12-07 17:26:27,179  INFO DAGScheduler:58 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at WordCountService.scala:24), which has no missing parents
+2018-12-07 17:26:27,489  INFO MemoryStore:58 - Block broadcast_1 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:26:27,494  INFO MemoryStore:58 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:26:27,495  INFO BlockManagerInfo:58 - Added broadcast_1_piece0 in memory on localhost:13246 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:26:27,497  INFO SparkContext:58 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:26:27,518  INFO DAGScheduler:58 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at WordCountService.scala:24)
+2018-12-07 17:26:27,534  INFO TaskSchedulerImpl:58 - Adding task set 0.0 with 1 tasks
+2018-12-07 17:26:27,826  INFO TaskSetManager:58 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,ANY, 2127 bytes)
+2018-12-07 17:26:27,936  INFO Executor:58 - Running task 0.0 in stage 0.0 (TID 0)
+2018-12-07 17:26:28,101  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/blsmy.txt:0+1051088
+2018-12-07 17:26:28,221  INFO deprecation:840 - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2018-12-07 17:26:28,221  INFO deprecation:840 - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2018-12-07 17:26:28,222  INFO deprecation:840 - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2018-12-07 17:26:28,223  INFO deprecation:840 - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+2018-12-07 17:26:28,224  INFO deprecation:840 - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2018-12-07 17:26:29,855  INFO Executor:58 - Finished task 0.0 in stage 0.0 (TID 0). 2253 bytes result sent to driver
+2018-12-07 17:26:29,872  INFO TaskSetManager:58 - Finished task 0.0 in stage 0.0 (TID 0) in 2103 ms on localhost (1/1)
+2018-12-07 17:26:29,886  INFO TaskSchedulerImpl:58 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-12-07 17:26:29,939  INFO DAGScheduler:58 - ShuffleMapStage 0 (map at WordCountService.scala:24) finished in 2.308 s
+2018-12-07 17:26:29,941  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 17:26:29,943  INFO DAGScheduler:58 - running: Set()
+2018-12-07 17:26:29,944  INFO DAGScheduler:58 - waiting: Set(ResultStage 1)
+2018-12-07 17:26:29,944  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 17:26:29,946  INFO DAGScheduler:58 - Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at WordCountService.scala:24), which has no missing parents
+2018-12-07 17:26:29,977  INFO MemoryStore:58 - Block broadcast_2 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 17:26:29,979  INFO MemoryStore:58 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 1614.0 B, free 2.4 GB)
+2018-12-07 17:26:29,981  INFO BlockManagerInfo:58 - Added broadcast_2_piece0 in memory on localhost:13246 (size: 1614.0 B, free: 2.4 GB)
+2018-12-07 17:26:29,982  INFO SparkContext:58 - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:26:29,983  INFO DAGScheduler:58 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at WordCountService.scala:24)
+2018-12-07 17:26:29,983  INFO TaskSchedulerImpl:58 - Adding task set 1.0 with 1 tasks
+2018-12-07 17:26:29,997  INFO TaskSetManager:58 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:26:29,998  INFO Executor:58 - Running task 0.0 in stage 1.0 (TID 1)
+2018-12-07 17:26:30,067  INFO ShuffleBlockFetcherIterator:58 - Getting 1 non-empty blocks out of 1 blocks
+2018-12-07 17:26:30,074  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 25 ms
+2018-12-07 17:26:30,363  INFO Executor:58 - Finished task 0.0 in stage 1.0 (TID 1). 667219 bytes result sent to driver
+2018-12-07 17:26:30,393  INFO TaskSetManager:58 - Finished task 0.0 in stage 1.0 (TID 1) in 409 ms on localhost (1/1)
+2018-12-07 17:26:30,394  INFO DAGScheduler:58 - ResultStage 1 (collectAsMap at WordCountService.scala:24) finished in 0.410 s
+2018-12-07 17:26:30,394  INFO TaskSchedulerImpl:58 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-12-07 17:26:30,434  INFO DAGScheduler:58 - Job 0 finished: collectAsMap at WordCountService.scala:24, took 3.557436 s
+2018-12-07 17:33:33,824  INFO SparkdemoApplication:48 - Starting SparkdemoApplication on BayMin--PC with PID 22496 (F:\IDEA-WorkSpace\sparkdemo\target\classes started by lenovo in F:\IDEA-WorkSpace\sparkdemo)
+2018-12-07 17:33:33,885  INFO SparkdemoApplication:666 - No active profile set, falling back to default profiles: default
+2018-12-07 17:33:35,050  INFO Version:17 - HV000001: Hibernate Validator 5.2.2.Final
+2018-12-07 17:33:35,312  INFO AnnotationConfigEmbeddedWebApplicationContext:578 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 17:33:35 CST 2018]; root of context hierarchy
+2018-12-07 17:33:36,103  INFO DefaultListableBeanFactory:839 - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2018-12-07 17:33:36,384  INFO AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-12-07 17:33:36,960  INFO TomcatEmbeddedServletContainer:81 - Tomcat initialized with port(s): 8008 (http)
+2018-12-07 17:33:36,981  INFO StandardService:180 - Starting service Tomcat
+2018-12-07 17:33:36,982  INFO StandardEngine:180 - Starting Servlet Engine: Apache Tomcat/8.0.30
+2018-12-07 17:33:37,199  INFO [/]:180 - Initializing Spring embedded WebApplicationContext
+2018-12-07 17:33:37,199  INFO ContextLoader:272 - Root WebApplicationContext: initialization completed in 1887 ms
+2018-12-07 17:33:37,542  INFO ServletRegistrationBean:189 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-07 17:33:37,547  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-07 17:33:37,548  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-07 17:33:37,548  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-07 17:33:37,548  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-07 17:33:38,325  INFO SparkContext:58 - Running Spark version 1.6.3
+2018-12-07 17:33:38,936  INFO SecurityManager:58 - Changing view acls to: lenovo,root
+2018-12-07 17:33:38,937  INFO SecurityManager:58 - Changing modify acls to: lenovo,root
+2018-12-07 17:33:38,938  INFO SecurityManager:58 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(lenovo, root); users with modify permissions: Set(lenovo, root)
+2018-12-07 17:33:40,755  INFO Utils:58 - Successfully started service 'sparkDriver' on port 13555.
+2018-12-07 17:33:41,487  INFO Slf4jLogger:80 - Slf4jLogger started
+2018-12-07 17:33:41,592  INFO Remoting:74 - Starting remoting
+2018-12-07 17:33:41,879  INFO Remoting:74 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.216.1:13572]
+2018-12-07 17:33:41,886  INFO Utils:58 - Successfully started service 'sparkDriverActorSystem' on port 13572.
+2018-12-07 17:33:41,938  INFO SparkEnv:58 - Registering MapOutputTracker
+2018-12-07 17:33:42,024  INFO SparkEnv:58 - Registering BlockManagerMaster
+2018-12-07 17:33:42,044  INFO DiskBlockManager:58 - Created local directory at C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e
+2018-12-07 17:33:42,121  INFO MemoryStore:58 - MemoryStore started with capacity 2.4 GB
+2018-12-07 17:33:42,269  INFO SparkEnv:58 - Registering OutputCommitCoordinator
+2018-12-07 17:33:42,631  INFO Server:272 - jetty-8.y.z-SNAPSHOT
+2018-12-07 17:33:42,702  INFO AbstractConnector:338 - Started SelectChannelConnector@0.0.0.0:4040
+2018-12-07 17:33:42,703  INFO Utils:58 - Successfully started service 'SparkUI' on port 4040.
+2018-12-07 17:33:42,705  INFO SparkUI:58 - Started SparkUI at http://192.168.216.1:4040
+2018-12-07 17:33:43,032  INFO Executor:58 - Starting executor ID driver on host localhost
+2018-12-07 17:33:43,099  INFO Utils:58 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 13581.
+2018-12-07 17:33:43,100  INFO NettyBlockTransferService:58 - Server created on 13581
+2018-12-07 17:33:43,104  INFO BlockManagerMaster:58 - Trying to register BlockManager
+2018-12-07 17:33:43,111  INFO BlockManagerMasterEndpoint:58 - Registering block manager localhost:13581 with 2.4 GB RAM, BlockManagerId(driver, localhost, 13581)
+2018-12-07 17:33:43,114  INFO BlockManagerMaster:58 - Registered BlockManager
+2018-12-07 17:33:43,551  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@146044d7: startup date [Fri Dec 07 17:33:35 CST 2018]; root of context hierarchy
+2018-12-07 17:33:43,622  INFO RequestMappingHandlerMapping:527 - Mapped "{[/spark/wordCount]}" onto public java.util.Map<java.lang.String, java.lang.Integer> com.bay.sparkspringboot.sparkdemo.controller.WordCountController.wordCount()
+2018-12-07 17:33:43,625  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-07 17:33:43,625  INFO RequestMappingHandlerMapping:527 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-07 17:33:43,660  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 17:33:43,660  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 17:33:43,698  INFO SimpleUrlHandlerMapping:341 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-07 17:33:43,742  WARN ThymeleafAutoConfiguration:90 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-12-07 17:33:44,409  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-12-07 17:33:44,605  INFO Http11NioProtocol:180 - Initializing ProtocolHandler ["http-nio-8008"]
+2018-12-07 17:33:44,611  INFO Http11NioProtocol:180 - Starting ProtocolHandler ["http-nio-8008"]
+2018-12-07 17:33:44,613  INFO NioSelectorPool:180 - Using a shared selector for servlet write/read
+2018-12-07 17:33:44,634  INFO TomcatEmbeddedServletContainer:162 - Tomcat started on port(s): 8008 (http)
+2018-12-07 17:33:44,646  INFO SparkdemoApplication:57 - Started SparkdemoApplication in 11.533 seconds (JVM running for 17.042)
+2018-12-07 17:33:53,794  INFO [/]:180 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-07 17:33:53,795  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-07 17:33:53,812  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2018-12-07 17:33:55,536  INFO MemoryStore:58 - Block broadcast_0 stored as values in memory (estimated size 107.7 KB, free 2.4 GB)
+2018-12-07 17:33:55,708  INFO MemoryStore:58 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.8 KB, free 2.4 GB)
+2018-12-07 17:33:55,716  INFO BlockManagerInfo:58 - Added broadcast_0_piece0 in memory on localhost:13581 (size: 9.8 KB, free: 2.4 GB)
+2018-12-07 17:33:55,735  INFO SparkContext:58 - Created broadcast 0 from textFile at WordCountService.scala:22
+2018-12-07 17:33:57,410  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:33:57,694  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:33:58,066  INFO DAGScheduler:58 - Registering RDD 3 (map at WordCountService.scala:23)
+2018-12-07 17:33:58,110  INFO DAGScheduler:58 - Got job 0 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:33:58,112  INFO DAGScheduler:58 - Final stage: ResultStage 1 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:33:58,113  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 0)
+2018-12-07 17:33:58,118  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 0)
+2018-12-07 17:33:58,187  INFO DAGScheduler:58 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:33:58,463  INFO MemoryStore:58 - Block broadcast_1 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:33:58,468  INFO MemoryStore:58 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:33:58,471  INFO BlockManagerInfo:58 - Added broadcast_1_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:33:58,473  INFO SparkContext:58 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:33:58,498  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at WordCountService.scala:23)
+2018-12-07 17:33:58,502  INFO TaskSchedulerImpl:58 - Adding task set 0.0 with 2 tasks
+2018-12-07 17:33:58,734  INFO TaskSetManager:58 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:33:58,801  INFO Executor:58 - Running task 0.0 in stage 0.0 (TID 0)
+2018-12-07 17:33:58,933  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:33:59,001  INFO deprecation:840 - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2018-12-07 17:33:59,001  INFO deprecation:840 - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2018-12-07 17:33:59,001  INFO deprecation:840 - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2018-12-07 17:33:59,001  INFO deprecation:840 - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+2018-12-07 17:33:59,001  INFO deprecation:840 - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2018-12-07 17:34:30,316  INFO Executor:58 - Finished task 0.0 in stage 0.0 (TID 0). 2254 bytes result sent to driver
+2018-12-07 17:34:30,342  INFO TaskSetManager:58 - Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:34:30,344  INFO Executor:58 - Running task 1.0 in stage 0.0 (TID 1)
+2018-12-07 17:34:30,348  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:34:30,430  INFO TaskSetManager:58 - Finished task 0.0 in stage 0.0 (TID 0) in 31741 ms on localhost (1/2)
+2018-12-07 17:34:35,255  INFO Executor:58 - Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+2018-12-07 17:34:35,258  INFO TaskSetManager:58 - Finished task 1.0 in stage 0.0 (TID 1) in 4916 ms on localhost (2/2)
+2018-12-07 17:34:35,260  INFO DAGScheduler:58 - ShuffleMapStage 0 (map at WordCountService.scala:23) finished in 36.675 s
+2018-12-07 17:34:35,260  INFO TaskSchedulerImpl:58 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2018-12-07 17:34:35,277  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 17:34:35,278  INFO DAGScheduler:58 - running: Set()
+2018-12-07 17:34:35,279  INFO DAGScheduler:58 - waiting: Set(ResultStage 1)
+2018-12-07 17:34:35,280  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 17:34:35,294  INFO DAGScheduler:58 - Submitting ResultStage 1 (ShuffledRDD[4] at reduceByKey at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:34:35,329  INFO MemoryStore:58 - Block broadcast_2 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 17:34:35,330  INFO MemoryStore:58 - Block broadcast_2_piece0 stored as bytes in memory (estimated size 1615.0 B, free 2.4 GB)
+2018-12-07 17:34:35,331  INFO BlockManagerInfo:58 - Added broadcast_2_piece0 in memory on localhost:13581 (size: 1615.0 B, free: 2.4 GB)
+2018-12-07 17:34:35,331  INFO SparkContext:58 - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:34:35,332  INFO DAGScheduler:58 - Submitting 2 missing tasks from ResultStage 1 (ShuffledRDD[4] at reduceByKey at WordCountService.scala:23)
+2018-12-07 17:34:35,332  INFO TaskSchedulerImpl:58 - Adding task set 1.0 with 2 tasks
+2018-12-07 17:34:35,337  INFO TaskSetManager:58 - Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:34:35,338  INFO Executor:58 - Running task 0.0 in stage 1.0 (TID 2)
+2018-12-07 17:34:35,382  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:34:35,397  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 36 ms
+2018-12-07 17:34:35,620  INFO Executor:58 - Finished task 0.0 in stage 1.0 (TID 2). 281653 bytes result sent to driver
+2018-12-07 17:34:35,622  INFO TaskSetManager:58 - Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:34:35,647  INFO Executor:58 - Running task 1.0 in stage 1.0 (TID 3)
+2018-12-07 17:34:35,649  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:34:35,649  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2018-12-07 17:34:35,655  INFO TaskSetManager:58 - Finished task 0.0 in stage 1.0 (TID 2) in 322 ms on localhost (1/2)
+2018-12-07 17:34:35,754  INFO Executor:58 - Finished task 1.0 in stage 1.0 (TID 3). 283067 bytes result sent to driver
+2018-12-07 17:34:35,777  INFO TaskSetManager:58 - Finished task 1.0 in stage 1.0 (TID 3) in 156 ms on localhost (2/2)
+2018-12-07 17:34:35,777  INFO DAGScheduler:58 - ResultStage 1 (collectAsMap at WordCountService.scala:23) finished in 0.444 s
+2018-12-07 17:34:35,777  INFO TaskSchedulerImpl:58 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2018-12-07 17:34:35,812  INFO DAGScheduler:58 - Job 0 finished: collectAsMap at WordCountService.scala:23, took 38.117173 s
+2018-12-07 17:45:48,119  INFO ContextCleaner:58 - Cleaned accumulator 2
+2018-12-07 17:45:48,171  INFO BlockManagerInfo:58 - Removed broadcast_2_piece0 on localhost:13581 in memory (size: 1615.0 B, free: 2.4 GB)
+2018-12-07 17:45:48,203  INFO BlockManagerInfo:58 - Removed broadcast_1_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:45:48,204  INFO ContextCleaner:58 - Cleaned accumulator 1
+2018-12-07 17:45:48,212  INFO ContextCleaner:58 - Cleaned shuffle 0
+2018-12-07 17:45:48,216  INFO BlockManagerInfo:58 - Removed broadcast_0_piece0 on localhost:13581 in memory (size: 9.8 KB, free: 2.4 GB)
+2018-12-07 17:46:03,150  INFO MemoryStore:58 - Block broadcast_3 stored as values in memory (estimated size 59.6 KB, free 2.4 GB)
+2018-12-07 17:46:03,313  INFO MemoryStore:58 - Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.8 KB, free 2.4 GB)
+2018-12-07 17:46:03,313  INFO BlockManagerInfo:58 - Added broadcast_3_piece0 in memory on localhost:13581 (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:46:03,314  INFO SparkContext:58 - Created broadcast 3 from textFile at WordCountService.scala:22
+2018-12-07 17:46:03,459  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:46:03,557  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:46:03,559  INFO DAGScheduler:58 - Registering RDD 8 (map at WordCountService.scala:23)
+2018-12-07 17:46:03,560  INFO DAGScheduler:58 - Got job 1 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:46:03,560  INFO DAGScheduler:58 - Final stage: ResultStage 3 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:46:03,560  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 2)
+2018-12-07 17:46:03,560  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 2)
+2018-12-07 17:46:03,560  INFO DAGScheduler:58 - Submitting ShuffleMapStage 2 (MapPartitionsRDD[8] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:46:03,562  INFO MemoryStore:58 - Block broadcast_4 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:46:03,563  INFO MemoryStore:58 - Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:46:03,564  INFO BlockManagerInfo:58 - Added broadcast_4_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:46:03,564  INFO SparkContext:58 - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:46:03,566  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[8] at map at WordCountService.scala:23)
+2018-12-07 17:46:03,566  INFO TaskSchedulerImpl:58 - Adding task set 2.0 with 2 tasks
+2018-12-07 17:46:03,566  INFO TaskSetManager:58 - Starting task 0.0 in stage 2.0 (TID 4, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:46:03,567  INFO Executor:58 - Running task 0.0 in stage 2.0 (TID 4)
+2018-12-07 17:46:03,572  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:46:20,951  INFO Executor:58 - Finished task 0.0 in stage 2.0 (TID 4). 2254 bytes result sent to driver
+2018-12-07 17:46:20,952  INFO TaskSetManager:58 - Starting task 1.0 in stage 2.0 (TID 5, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:46:20,953  INFO Executor:58 - Running task 1.0 in stage 2.0 (TID 5)
+2018-12-07 17:46:20,954  INFO TaskSetManager:58 - Finished task 0.0 in stage 2.0 (TID 4) in 17387 ms on localhost (1/2)
+2018-12-07 17:46:20,956  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:46:27,736  INFO Executor:58 - Finished task 1.0 in stage 2.0 (TID 5). 2254 bytes result sent to driver
+2018-12-07 17:46:27,738  INFO TaskSetManager:58 - Finished task 1.0 in stage 2.0 (TID 5) in 6786 ms on localhost (2/2)
+2018-12-07 17:46:27,739  INFO DAGScheduler:58 - ShuffleMapStage 2 (map at WordCountService.scala:23) finished in 24.172 s
+2018-12-07 17:46:27,739  INFO TaskSchedulerImpl:58 - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2018-12-07 17:46:27,739  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 17:46:27,739  INFO DAGScheduler:58 - running: Set()
+2018-12-07 17:46:27,740  INFO DAGScheduler:58 - waiting: Set(ResultStage 3)
+2018-12-07 17:46:27,740  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 17:46:27,740  INFO DAGScheduler:58 - Submitting ResultStage 3 (ShuffledRDD[9] at reduceByKey at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:46:27,742  INFO MemoryStore:58 - Block broadcast_5 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 17:46:27,745  INFO MemoryStore:58 - Block broadcast_5_piece0 stored as bytes in memory (estimated size 1603.0 B, free 2.4 GB)
+2018-12-07 17:46:27,747  INFO BlockManagerInfo:58 - Added broadcast_5_piece0 in memory on localhost:13581 (size: 1603.0 B, free: 2.4 GB)
+2018-12-07 17:46:27,748  INFO SparkContext:58 - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:46:27,748  INFO DAGScheduler:58 - Submitting 2 missing tasks from ResultStage 3 (ShuffledRDD[9] at reduceByKey at WordCountService.scala:23)
+2018-12-07 17:46:27,749  INFO TaskSchedulerImpl:58 - Adding task set 3.0 with 2 tasks
+2018-12-07 17:46:27,749  INFO TaskSetManager:58 - Starting task 0.0 in stage 3.0 (TID 6, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:46:27,749  INFO Executor:58 - Running task 0.0 in stage 3.0 (TID 6)
+2018-12-07 17:46:27,750  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:46:27,751  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 1 ms
+2018-12-07 17:46:27,865  INFO Executor:58 - Finished task 0.0 in stage 3.0 (TID 6). 281653 bytes result sent to driver
+2018-12-07 17:46:27,866  INFO TaskSetManager:58 - Starting task 1.0 in stage 3.0 (TID 7, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:46:27,867  INFO Executor:58 - Running task 1.0 in stage 3.0 (TID 7)
+2018-12-07 17:46:27,870  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:46:27,870  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2018-12-07 17:46:27,874  INFO TaskSetManager:58 - Finished task 0.0 in stage 3.0 (TID 6) in 125 ms on localhost (1/2)
+2018-12-07 17:46:27,982  INFO Executor:58 - Finished task 1.0 in stage 3.0 (TID 7). 283067 bytes result sent to driver
+2018-12-07 17:46:27,989  INFO TaskSetManager:58 - Finished task 1.0 in stage 3.0 (TID 7) in 123 ms on localhost (2/2)
+2018-12-07 17:46:27,989  INFO DAGScheduler:58 - ResultStage 3 (collectAsMap at WordCountService.scala:23) finished in 0.240 s
+2018-12-07 17:46:27,990  INFO TaskSchedulerImpl:58 - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2018-12-07 17:46:27,990  INFO DAGScheduler:58 - Job 1 finished: collectAsMap at WordCountService.scala:23, took 24.432683 s
+2018-12-07 17:48:59,753  INFO MemoryStore:58 - Block broadcast_6 stored as values in memory (estimated size 127.2 KB, free 2.4 GB)
+2018-12-07 17:48:59,763  INFO MemoryStore:58 - Block broadcast_6_piece0 stored as bytes in memory (estimated size 13.8 KB, free 2.4 GB)
+2018-12-07 17:48:59,766  INFO BlockManagerInfo:58 - Added broadcast_6_piece0 in memory on localhost:13581 (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:48:59,768  INFO SparkContext:58 - Created broadcast 6 from textFile at WordCountService.scala:22
+2018-12-07 17:48:59,806  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:48:59,826  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:48:59,828  INFO DAGScheduler:58 - Registering RDD 13 (map at WordCountService.scala:23)
+2018-12-07 17:48:59,828  INFO DAGScheduler:58 - Got job 2 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:48:59,829  INFO DAGScheduler:58 - Final stage: ResultStage 5 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:48:59,829  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 4)
+2018-12-07 17:48:59,830  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 4)
+2018-12-07 17:48:59,831  INFO DAGScheduler:58 - Submitting ShuffleMapStage 4 (MapPartitionsRDD[13] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:48:59,833  INFO MemoryStore:58 - Block broadcast_7 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:48:59,836  INFO MemoryStore:58 - Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:48:59,838  INFO BlockManagerInfo:58 - Added broadcast_7_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:48:59,839  INFO SparkContext:58 - Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:48:59,840  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[13] at map at WordCountService.scala:23)
+2018-12-07 17:48:59,840  INFO TaskSchedulerImpl:58 - Adding task set 4.0 with 2 tasks
+2018-12-07 17:48:59,843  INFO TaskSetManager:58 - Starting task 0.0 in stage 4.0 (TID 8, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:48:59,844  INFO Executor:58 - Running task 0.0 in stage 4.0 (TID 8)
+2018-12-07 17:48:59,845  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:48:59,889  INFO ContextCleaner:58 - Cleaned accumulator 4
+2018-12-07 17:48:59,892  INFO BlockManagerInfo:58 - Removed broadcast_4_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:48:59,895  INFO ContextCleaner:58 - Cleaned accumulator 3
+2018-12-07 17:48:59,896  INFO ContextCleaner:58 - Cleaned shuffle 1
+2018-12-07 17:48:59,896  INFO BlockManagerInfo:58 - Removed broadcast_3_piece0 on localhost:13581 in memory (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:48:59,898  INFO BlockManagerInfo:58 - Removed broadcast_5_piece0 on localhost:13581 in memory (size: 1603.0 B, free: 2.4 GB)
+2018-12-07 17:49:15,228  INFO Executor:58 - Finished task 0.0 in stage 4.0 (TID 8). 2309 bytes result sent to driver
+2018-12-07 17:49:15,228  INFO TaskSetManager:58 - Starting task 1.0 in stage 4.0 (TID 9, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:49:15,229  INFO Executor:58 - Running task 1.0 in stage 4.0 (TID 9)
+2018-12-07 17:49:15,229  INFO TaskSetManager:58 - Finished task 0.0 in stage 4.0 (TID 8) in 15386 ms on localhost (1/2)
+2018-12-07 17:49:15,231  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:49:22,184 ERROR Executor:95 - Exception in task 1.0 in stage 4.0 (TID 9)
+java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_2_1_0.index.3dc24f8e-d6bb-4906-a36d-81a7159a7fb7 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-07 17:49:22,304  WARN TaskSetManager:70 - Lost task 1.0 in stage 4.0 (TID 9, localhost): java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_2_1_0.index.3dc24f8e-d6bb-4906-a36d-81a7159a7fb7 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-12-07 17:49:22,338 ERROR TaskSetManager:74 - Task 1 in stage 4.0 failed 1 times; aborting job
+2018-12-07 17:49:22,342  INFO TaskSchedulerImpl:58 - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2018-12-07 17:49:22,359  INFO TaskSchedulerImpl:58 - Cancelling stage 4
+2018-12-07 17:49:22,363  INFO DAGScheduler:58 - ShuffleMapStage 4 (map at WordCountService.scala:23) failed in 22.520 s
+2018-12-07 17:49:22,366  INFO DAGScheduler:58 - Job 2 failed: collectAsMap at WordCountService.scala:23, took 22.538892 s
+2018-12-07 17:49:22,483 ERROR [dispatcherServlet]:182 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 4.0 failed 1 times, most recent failure: Lost task 1.0 in stage 4.0 (TID 9, localhost): java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_2_1_0.index.3dc24f8e-d6bb-4906-a36d-81a7159a7fb7 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:] with root cause
+java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_2_1_0.index.3dc24f8e-d6bb-4906-a36d-81a7159a7fb7 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-07 17:49:49,501  INFO MemoryStore:58 - Block broadcast_8 stored as values in memory (estimated size 127.2 KB, free 2.4 GB)
+2018-12-07 17:49:49,513  INFO MemoryStore:58 - Block broadcast_8_piece0 stored as bytes in memory (estimated size 13.8 KB, free 2.4 GB)
+2018-12-07 17:49:49,519  INFO BlockManagerInfo:58 - Added broadcast_8_piece0 in memory on localhost:13581 (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:49:49,521  INFO SparkContext:58 - Created broadcast 8 from textFile at WordCountService.scala:22
+2018-12-07 17:49:49,560  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:49:49,676  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:49:49,678  INFO DAGScheduler:58 - Registering RDD 18 (map at WordCountService.scala:23)
+2018-12-07 17:49:49,678  INFO DAGScheduler:58 - Got job 3 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:49:49,678  INFO DAGScheduler:58 - Final stage: ResultStage 7 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:49:49,678  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 6)
+2018-12-07 17:49:49,679  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 6)
+2018-12-07 17:49:49,679  INFO DAGScheduler:58 - Submitting ShuffleMapStage 6 (MapPartitionsRDD[18] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:49:49,681  INFO MemoryStore:58 - Block broadcast_9 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:49:49,686  INFO MemoryStore:58 - Block broadcast_9_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:49:49,688  INFO BlockManagerInfo:58 - Added broadcast_9_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:49:49,689  INFO SparkContext:58 - Created broadcast 9 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:49:49,689  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[18] at map at WordCountService.scala:23)
+2018-12-07 17:49:49,689  INFO TaskSchedulerImpl:58 - Adding task set 6.0 with 2 tasks
+2018-12-07 17:49:49,690  INFO TaskSetManager:58 - Starting task 0.0 in stage 6.0 (TID 10, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:49:49,690  INFO Executor:58 - Running task 0.0 in stage 6.0 (TID 10)
+2018-12-07 17:49:49,691  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:49:50,772  INFO BlockManagerInfo:58 - Removed broadcast_6_piece0 on localhost:13581 in memory (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:49:50,774  INFO BlockManagerInfo:58 - Removed broadcast_7_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:49:50,775  INFO ContextCleaner:58 - Cleaned accumulator 5
+2018-12-07 17:49:50,775  INFO ContextCleaner:58 - Cleaned shuffle 2
+2018-12-07 17:50:05,104 ERROR Executor:95 - Exception in task 0.0 in stage 6.0 (TID 10)
+java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_3_0_0.index.21086a56-3721-4713-b5da-ab6ce675e051 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-07 17:50:05,105  INFO TaskSetManager:58 - Starting task 1.0 in stage 6.0 (TID 11, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:50:05,106  WARN TaskSetManager:70 - Lost task 0.0 in stage 6.0 (TID 10, localhost): java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_3_0_0.index.21086a56-3721-4713-b5da-ab6ce675e051 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-12-07 17:50:05,106  INFO Executor:58 - Running task 1.0 in stage 6.0 (TID 11)
+2018-12-07 17:50:05,106 ERROR TaskSetManager:74 - Task 0 in stage 6.0 failed 1 times; aborting job
+2018-12-07 17:50:05,107  INFO TaskSchedulerImpl:58 - Cancelling stage 6
+2018-12-07 17:50:05,109  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:50:05,136  INFO Executor:58 - Executor is trying to kill task 1.0 in stage 6.0 (TID 11)
+2018-12-07 17:50:05,137  INFO TaskSchedulerImpl:58 - Stage 6 was cancelled
+2018-12-07 17:50:05,139  INFO DAGScheduler:58 - ShuffleMapStage 6 (map at WordCountService.scala:23) failed in 15.448 s
+2018-12-07 17:50:05,139  INFO DAGScheduler:58 - Job 3 failed: collectAsMap at WordCountService.scala:23, took 15.462814 s
+2018-12-07 17:50:05,140  INFO Executor:58 - Executor killed task 1.0 in stage 6.0 (TID 11)
+2018-12-07 17:50:05,140 ERROR [dispatcherServlet]:182 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 6.0 failed 1 times, most recent failure: Lost task 0.0 in stage 6.0 (TID 10, localhost): java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_3_0_0.index.21086a56-3721-4713-b5da-ab6ce675e051 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:] with root cause
+java.io.FileNotFoundException: C:\Users\lenovo\AppData\Local\Temp\blockmgr-52049f9b-9906-4a29-911d-387a826f9e3e\0d\shuffle_3_0_0.index.21086a56-3721-4713-b5da-ab6ce675e051 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.writeIndexFileAndCommit(IndexShuffleBlockResolver.scala:142)
+	at org.apache.spark.shuffle.sort.SortShuffleWriter.write(SortShuffleWriter.scala:74)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:73)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:41)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-07 17:50:05,175  WARN TaskSetManager:70 - Lost task 1.0 in stage 6.0 (TID 11, localhost): TaskKilled (killed intentionally)
+2018-12-07 17:50:05,175  INFO TaskSchedulerImpl:58 - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2018-12-07 17:51:04,684  INFO BlockManagerInfo:58 - Removed broadcast_9_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:51:04,686  INFO ContextCleaner:58 - Cleaned shuffle 3
+2018-12-07 17:51:04,689  INFO BlockManagerInfo:58 - Removed broadcast_8_piece0 on localhost:13581 in memory (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:51:04,690  INFO ContextCleaner:58 - Cleaned accumulator 6
+2018-12-07 17:51:07,540  INFO MemoryStore:58 - Block broadcast_10 stored as values in memory (estimated size 127.2 KB, free 2.4 GB)
+2018-12-07 17:51:07,551  INFO MemoryStore:58 - Block broadcast_10_piece0 stored as bytes in memory (estimated size 13.8 KB, free 2.4 GB)
+2018-12-07 17:51:07,553  INFO BlockManagerInfo:58 - Added broadcast_10_piece0 in memory on localhost:13581 (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:51:07,554  INFO SparkContext:58 - Created broadcast 10 from textFile at WordCountService.scala:22
+2018-12-07 17:51:07,599  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:51:07,619  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:51:07,619  INFO DAGScheduler:58 - Registering RDD 23 (map at WordCountService.scala:23)
+2018-12-07 17:51:07,619  INFO DAGScheduler:58 - Got job 4 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:51:07,619  INFO DAGScheduler:58 - Final stage: ResultStage 9 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:51:07,619  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 8)
+2018-12-07 17:51:07,619  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 8)
+2018-12-07 17:51:07,619  INFO DAGScheduler:58 - Submitting ShuffleMapStage 8 (MapPartitionsRDD[23] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:51:07,623  INFO MemoryStore:58 - Block broadcast_11 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:51:07,627  INFO MemoryStore:58 - Block broadcast_11_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:51:07,630  INFO BlockManagerInfo:58 - Added broadcast_11_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:51:07,632  INFO SparkContext:58 - Created broadcast 11 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:51:07,633  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[23] at map at WordCountService.scala:23)
+2018-12-07 17:51:07,633  INFO TaskSchedulerImpl:58 - Adding task set 8.0 with 2 tasks
+2018-12-07 17:51:07,635  INFO TaskSetManager:58 - Starting task 0.0 in stage 8.0 (TID 12, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:51:07,635  INFO Executor:58 - Running task 0.0 in stage 8.0 (TID 12)
+2018-12-07 17:51:07,637  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:51:23,762  INFO Executor:58 - Finished task 0.0 in stage 8.0 (TID 12). 2309 bytes result sent to driver
+2018-12-07 17:51:23,763  INFO TaskSetManager:58 - Starting task 1.0 in stage 8.0 (TID 13, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:51:23,764  INFO Executor:58 - Running task 1.0 in stage 8.0 (TID 13)
+2018-12-07 17:51:23,764  INFO TaskSetManager:58 - Finished task 0.0 in stage 8.0 (TID 12) in 16130 ms on localhost (1/2)
+2018-12-07 17:51:23,766  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:51:29,978  INFO Executor:58 - Finished task 1.0 in stage 8.0 (TID 13). 2309 bytes result sent to driver
+2018-12-07 17:51:29,979  INFO TaskSetManager:58 - Finished task 1.0 in stage 8.0 (TID 13) in 6216 ms on localhost (2/2)
+2018-12-07 17:51:29,979  INFO DAGScheduler:58 - ShuffleMapStage 8 (map at WordCountService.scala:23) finished in 22.345 s
+2018-12-07 17:51:29,979  INFO TaskSchedulerImpl:58 - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2018-12-07 17:51:29,979  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 17:51:29,980  INFO DAGScheduler:58 - running: Set()
+2018-12-07 17:51:29,980  INFO DAGScheduler:58 - waiting: Set(ResultStage 9)
+2018-12-07 17:51:29,980  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 17:51:29,980  INFO DAGScheduler:58 - Submitting ResultStage 9 (ShuffledRDD[24] at reduceByKey at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:51:29,982  INFO MemoryStore:58 - Block broadcast_12 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 17:51:29,986  INFO MemoryStore:58 - Block broadcast_12_piece0 stored as bytes in memory (estimated size 1603.0 B, free 2.4 GB)
+2018-12-07 17:51:29,988  INFO BlockManagerInfo:58 - Added broadcast_12_piece0 in memory on localhost:13581 (size: 1603.0 B, free: 2.4 GB)
+2018-12-07 17:51:29,989  INFO SparkContext:58 - Created broadcast 12 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:51:29,989  INFO DAGScheduler:58 - Submitting 2 missing tasks from ResultStage 9 (ShuffledRDD[24] at reduceByKey at WordCountService.scala:23)
+2018-12-07 17:51:29,989  INFO TaskSchedulerImpl:58 - Adding task set 9.0 with 2 tasks
+2018-12-07 17:51:29,990  INFO TaskSetManager:58 - Starting task 0.0 in stage 9.0 (TID 14, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:51:29,990  INFO Executor:58 - Running task 0.0 in stage 9.0 (TID 14)
+2018-12-07 17:51:29,991  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:51:29,991  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2018-12-07 17:51:30,093  INFO Executor:58 - Finished task 0.0 in stage 9.0 (TID 14). 281653 bytes result sent to driver
+2018-12-07 17:51:30,094  INFO TaskSetManager:58 - Starting task 1.0 in stage 9.0 (TID 15, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:51:30,094  INFO Executor:58 - Running task 1.0 in stage 9.0 (TID 15)
+2018-12-07 17:51:30,095  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:51:30,096  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 1 ms
+2018-12-07 17:51:30,100  INFO TaskSetManager:58 - Finished task 0.0 in stage 9.0 (TID 14) in 111 ms on localhost (1/2)
+2018-12-07 17:51:30,190  INFO Executor:58 - Finished task 1.0 in stage 9.0 (TID 15). 283067 bytes result sent to driver
+2018-12-07 17:51:30,199  INFO TaskSetManager:58 - Finished task 1.0 in stage 9.0 (TID 15) in 105 ms on localhost (2/2)
+2018-12-07 17:51:30,199  INFO DAGScheduler:58 - ResultStage 9 (collectAsMap at WordCountService.scala:23) finished in 0.210 s
+2018-12-07 17:51:30,200  INFO TaskSchedulerImpl:58 - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2018-12-07 17:51:30,201  INFO DAGScheduler:58 - Job 4 finished: collectAsMap at WordCountService.scala:23, took 22.581803 s
+2018-12-07 17:52:21,481  INFO MemoryStore:58 - Block broadcast_13 stored as values in memory (estimated size 127.2 KB, free 2.4 GB)
+2018-12-07 17:52:21,494  INFO MemoryStore:58 - Block broadcast_13_piece0 stored as bytes in memory (estimated size 13.8 KB, free 2.4 GB)
+2018-12-07 17:52:21,496  INFO BlockManagerInfo:58 - Added broadcast_13_piece0 in memory on localhost:13581 (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:52:21,498  INFO SparkContext:58 - Created broadcast 13 from textFile at WordCountService.scala:22
+2018-12-07 17:52:21,533  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:52:21,653  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:52:21,656  INFO DAGScheduler:58 - Registering RDD 28 (map at WordCountService.scala:23)
+2018-12-07 17:52:21,656  INFO DAGScheduler:58 - Got job 5 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:52:21,656  INFO DAGScheduler:58 - Final stage: ResultStage 11 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:52:21,656  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 10)
+2018-12-07 17:52:21,656  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 10)
+2018-12-07 17:52:21,657  INFO DAGScheduler:58 - Submitting ShuffleMapStage 10 (MapPartitionsRDD[28] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:52:21,658  INFO MemoryStore:58 - Block broadcast_14 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:52:21,659  INFO MemoryStore:58 - Block broadcast_14_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:52:21,659  INFO BlockManagerInfo:58 - Added broadcast_14_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:52:21,660  INFO SparkContext:58 - Created broadcast 14 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:52:21,660  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[28] at map at WordCountService.scala:23)
+2018-12-07 17:52:21,660  INFO TaskSchedulerImpl:58 - Adding task set 10.0 with 2 tasks
+2018-12-07 17:52:21,660  INFO TaskSetManager:58 - Starting task 0.0 in stage 10.0 (TID 16, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:52:21,661  INFO Executor:58 - Running task 0.0 in stage 10.0 (TID 16)
+2018-12-07 17:52:21,663  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:52:22,784  INFO BlockManagerInfo:58 - Removed broadcast_12_piece0 on localhost:13581 in memory (size: 1603.0 B, free: 2.4 GB)
+2018-12-07 17:52:38,711  INFO Executor:58 - Finished task 0.0 in stage 10.0 (TID 16). 2309 bytes result sent to driver
+2018-12-07 17:52:38,712  INFO TaskSetManager:58 - Starting task 1.0 in stage 10.0 (TID 17, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:52:38,713  INFO Executor:58 - Running task 1.0 in stage 10.0 (TID 17)
+2018-12-07 17:52:38,713  INFO TaskSetManager:58 - Finished task 0.0 in stage 10.0 (TID 16) in 17053 ms on localhost (1/2)
+2018-12-07 17:52:38,716  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:52:46,400  INFO Executor:58 - Finished task 1.0 in stage 10.0 (TID 17). 2309 bytes result sent to driver
+2018-12-07 17:52:46,401  INFO TaskSetManager:58 - Finished task 1.0 in stage 10.0 (TID 17) in 7690 ms on localhost (2/2)
+2018-12-07 17:52:46,402  INFO DAGScheduler:58 - ShuffleMapStage 10 (map at WordCountService.scala:23) finished in 24.741 s
+2018-12-07 17:52:46,402  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 17:52:46,402  INFO DAGScheduler:58 - running: Set()
+2018-12-07 17:52:46,402  INFO DAGScheduler:58 - waiting: Set(ResultStage 11)
+2018-12-07 17:52:46,402  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 17:52:46,402  INFO TaskSchedulerImpl:58 - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2018-12-07 17:52:46,402  INFO DAGScheduler:58 - Submitting ResultStage 11 (ShuffledRDD[29] at reduceByKey at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:52:46,403  INFO MemoryStore:58 - Block broadcast_15 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 17:52:46,403  INFO MemoryStore:58 - Block broadcast_15_piece0 stored as bytes in memory (estimated size 1602.0 B, free 2.4 GB)
+2018-12-07 17:52:46,403  INFO BlockManagerInfo:58 - Added broadcast_15_piece0 in memory on localhost:13581 (size: 1602.0 B, free: 2.4 GB)
+2018-12-07 17:52:46,404  INFO SparkContext:58 - Created broadcast 15 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:52:46,404  INFO DAGScheduler:58 - Submitting 2 missing tasks from ResultStage 11 (ShuffledRDD[29] at reduceByKey at WordCountService.scala:23)
+2018-12-07 17:52:46,404  INFO TaskSchedulerImpl:58 - Adding task set 11.0 with 2 tasks
+2018-12-07 17:52:46,404  INFO TaskSetManager:58 - Starting task 0.0 in stage 11.0 (TID 18, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:52:46,405  INFO Executor:58 - Running task 0.0 in stage 11.0 (TID 18)
+2018-12-07 17:52:46,406  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:52:46,406  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2018-12-07 17:52:46,501  INFO BlockManagerInfo:58 - Removed broadcast_14_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:52:46,517  INFO Executor:58 - Finished task 0.0 in stage 11.0 (TID 18). 281653 bytes result sent to driver
+2018-12-07 17:52:46,517  INFO TaskSetManager:58 - Starting task 1.0 in stage 11.0 (TID 19, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:52:46,518  INFO Executor:58 - Running task 1.0 in stage 11.0 (TID 19)
+2018-12-07 17:52:46,519  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:52:46,519  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 1 ms
+2018-12-07 17:52:46,529  INFO TaskSetManager:58 - Finished task 0.0 in stage 11.0 (TID 18) in 125 ms on localhost (1/2)
+2018-12-07 17:52:46,638  INFO Executor:58 - Finished task 1.0 in stage 11.0 (TID 19). 283067 bytes result sent to driver
+2018-12-07 17:52:46,646  INFO TaskSetManager:58 - Finished task 1.0 in stage 11.0 (TID 19) in 129 ms on localhost (2/2)
+2018-12-07 17:52:46,647  INFO DAGScheduler:58 - ResultStage 11 (collectAsMap at WordCountService.scala:23) finished in 0.242 s
+2018-12-07 17:52:46,647  INFO TaskSchedulerImpl:58 - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2018-12-07 17:52:46,647  INFO DAGScheduler:58 - Job 5 finished: collectAsMap at WordCountService.scala:23, took 24.994051 s
+2018-12-07 17:53:59,410  INFO MemoryStore:58 - Block broadcast_16 stored as values in memory (estimated size 127.2 KB, free 2.4 GB)
+2018-12-07 17:53:59,422  INFO MemoryStore:58 - Block broadcast_16_piece0 stored as bytes in memory (estimated size 13.8 KB, free 2.4 GB)
+2018-12-07 17:53:59,424  INFO BlockManagerInfo:58 - Added broadcast_16_piece0 in memory on localhost:13581 (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:53:59,425  INFO SparkContext:58 - Created broadcast 16 from textFile at WordCountService.scala:22
+2018-12-07 17:53:59,460  INFO FileInputFormat:253 - Total input paths to process : 1
+2018-12-07 17:53:59,485  INFO SparkContext:58 - Starting job: collectAsMap at WordCountService.scala:23
+2018-12-07 17:53:59,485  INFO DAGScheduler:58 - Registering RDD 33 (map at WordCountService.scala:23)
+2018-12-07 17:53:59,486  INFO DAGScheduler:58 - Got job 6 (collectAsMap at WordCountService.scala:23) with 2 output partitions
+2018-12-07 17:53:59,486  INFO DAGScheduler:58 - Final stage: ResultStage 13 (collectAsMap at WordCountService.scala:23)
+2018-12-07 17:53:59,486  INFO DAGScheduler:58 - Parents of final stage: List(ShuffleMapStage 12)
+2018-12-07 17:53:59,486  INFO DAGScheduler:58 - Missing parents: List(ShuffleMapStage 12)
+2018-12-07 17:53:59,486  INFO DAGScheduler:58 - Submitting ShuffleMapStage 12 (MapPartitionsRDD[33] at map at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:53:59,487  INFO MemoryStore:58 - Block broadcast_17 stored as values in memory (estimated size 4.2 KB, free 2.4 GB)
+2018-12-07 17:53:59,489  INFO MemoryStore:58 - Block broadcast_17_piece0 stored as bytes in memory (estimated size 2.4 KB, free 2.4 GB)
+2018-12-07 17:53:59,490  INFO BlockManagerInfo:58 - Added broadcast_17_piece0 in memory on localhost:13581 (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:53:59,491  INFO SparkContext:58 - Created broadcast 17 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:53:59,491  INFO DAGScheduler:58 - Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[33] at map at WordCountService.scala:23)
+2018-12-07 17:53:59,492  INFO TaskSchedulerImpl:58 - Adding task set 12.0 with 2 tasks
+2018-12-07 17:53:59,493  INFO TaskSetManager:58 - Starting task 0.0 in stage 12.0 (TID 20, localhost, partition 0,ANY, 2131 bytes)
+2018-12-07 17:53:59,494  INFO Executor:58 - Running task 0.0 in stage 12.0 (TID 20)
+2018-12-07 17:53:59,497  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:0+134217728
+2018-12-07 17:54:01,224  INFO ContextCleaner:58 - Cleaned shuffle 5
+2018-12-07 17:54:01,227  INFO BlockManagerInfo:58 - Removed broadcast_13_piece0 on localhost:13581 in memory (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 17:54:01,232  INFO BlockManagerInfo:58 - Removed broadcast_15_piece0 on localhost:13581 in memory (size: 1602.0 B, free: 2.4 GB)
+2018-12-07 17:54:01,233  INFO ContextCleaner:58 - Cleaned accumulator 10
+2018-12-07 17:54:01,234  INFO ContextCleaner:58 - Cleaned accumulator 9
+2018-12-07 17:54:15,676  INFO Executor:58 - Finished task 0.0 in stage 12.0 (TID 20). 2309 bytes result sent to driver
+2018-12-07 17:54:15,677  INFO TaskSetManager:58 - Starting task 1.0 in stage 12.0 (TID 21, localhost, partition 1,ANY, 2131 bytes)
+2018-12-07 17:54:15,678  INFO Executor:58 - Running task 1.0 in stage 12.0 (TID 21)
+2018-12-07 17:54:15,678  INFO TaskSetManager:58 - Finished task 0.0 in stage 12.0 (TID 20) in 16185 ms on localhost (1/2)
+2018-12-07 17:54:15,679  INFO HadoopRDD:58 - Input split: hdfs://hadoop010:9000/data/tabletest.csv:134217728+54810071
+2018-12-07 17:54:23,018  INFO Executor:58 - Finished task 1.0 in stage 12.0 (TID 21). 2309 bytes result sent to driver
+2018-12-07 17:54:23,019  INFO TaskSetManager:58 - Finished task 1.0 in stage 12.0 (TID 21) in 7342 ms on localhost (2/2)
+2018-12-07 17:54:23,019  INFO DAGScheduler:58 - ShuffleMapStage 12 (map at WordCountService.scala:23) finished in 23.527 s
+2018-12-07 17:54:23,019  INFO TaskSchedulerImpl:58 - Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2018-12-07 17:54:23,019  INFO DAGScheduler:58 - looking for newly runnable stages
+2018-12-07 17:54:23,019  INFO DAGScheduler:58 - running: Set()
+2018-12-07 17:54:23,019  INFO DAGScheduler:58 - waiting: Set(ResultStage 13)
+2018-12-07 17:54:23,019  INFO DAGScheduler:58 - failed: Set()
+2018-12-07 17:54:23,020  INFO DAGScheduler:58 - Submitting ResultStage 13 (ShuffledRDD[34] at reduceByKey at WordCountService.scala:23), which has no missing parents
+2018-12-07 17:54:23,021  INFO MemoryStore:58 - Block broadcast_18 stored as values in memory (estimated size 2.6 KB, free 2.4 GB)
+2018-12-07 17:54:23,021  INFO MemoryStore:58 - Block broadcast_18_piece0 stored as bytes in memory (estimated size 1601.0 B, free 2.4 GB)
+2018-12-07 17:54:23,022  INFO BlockManagerInfo:58 - Added broadcast_18_piece0 in memory on localhost:13581 (size: 1601.0 B, free: 2.4 GB)
+2018-12-07 17:54:23,022  INFO SparkContext:58 - Created broadcast 18 from broadcast at DAGScheduler.scala:1006
+2018-12-07 17:54:23,022  INFO DAGScheduler:58 - Submitting 2 missing tasks from ResultStage 13 (ShuffledRDD[34] at reduceByKey at WordCountService.scala:23)
+2018-12-07 17:54:23,023  INFO TaskSchedulerImpl:58 - Adding task set 13.0 with 2 tasks
+2018-12-07 17:54:23,023  INFO TaskSetManager:58 - Starting task 0.0 in stage 13.0 (TID 22, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:54:23,025  INFO Executor:58 - Running task 0.0 in stage 13.0 (TID 22)
+2018-12-07 17:54:23,027  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:54:23,028  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 1 ms
+2018-12-07 17:54:23,148  INFO Executor:58 - Finished task 0.0 in stage 13.0 (TID 22). 281653 bytes result sent to driver
+2018-12-07 17:54:23,148  INFO TaskSetManager:58 - Starting task 1.0 in stage 13.0 (TID 23, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+2018-12-07 17:54:23,149  INFO Executor:58 - Running task 1.0 in stage 13.0 (TID 23)
+2018-12-07 17:54:23,149  INFO ShuffleBlockFetcherIterator:58 - Getting 2 non-empty blocks out of 2 blocks
+2018-12-07 17:54:23,149  INFO ShuffleBlockFetcherIterator:58 - Started 0 remote fetches in 0 ms
+2018-12-07 17:54:23,159  INFO TaskSetManager:58 - Finished task 0.0 in stage 13.0 (TID 22) in 136 ms on localhost (1/2)
+2018-12-07 17:54:23,254  INFO Executor:58 - Finished task 1.0 in stage 13.0 (TID 23). 283067 bytes result sent to driver
+2018-12-07 17:54:23,259  INFO BlockManagerInfo:58 - Removed broadcast_17_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 17:54:23,268  INFO TaskSetManager:58 - Finished task 1.0 in stage 13.0 (TID 23) in 120 ms on localhost (2/2)
+2018-12-07 17:54:23,268  INFO DAGScheduler:58 - ResultStage 13 (collectAsMap at WordCountService.scala:23) finished in 0.245 s
+2018-12-07 17:54:23,269  INFO TaskSchedulerImpl:58 - Removed TaskSet 13.0, whose tasks have all completed, from pool 
+2018-12-07 17:54:23,269  INFO DAGScheduler:58 - Job 6 finished: collectAsMap at WordCountService.scala:23, took 23.783926 s
+2018-12-07 18:03:43,339  INFO ContextCleaner:58 - Cleaned accumulator 8
+2018-12-07 18:03:43,340  INFO ContextCleaner:58 - Cleaned accumulator 11
+2018-12-07 18:03:43,342  INFO BlockManagerInfo:58 - Removed broadcast_18_piece0 on localhost:13581 in memory (size: 1601.0 B, free: 2.4 GB)
+2018-12-07 18:03:43,343  INFO BlockManagerInfo:58 - Removed broadcast_16_piece0 on localhost:13581 in memory (size: 13.8 KB, free: 2.4 GB)
+2018-12-07 18:03:43,344  INFO ContextCleaner:58 - Cleaned shuffle 6
+2018-12-07 18:03:43,344  INFO ContextCleaner:58 - Cleaned accumulator 12
+2018-12-07 18:03:43,344  INFO BlockManagerInfo:58 - Removed broadcast_11_piece0 on localhost:13581 in memory (size: 2.4 KB, free: 2.4 GB)
+2018-12-07 18:03:43,345  INFO ContextCleaner:58 - Cleaned accumulator 7
+2018-12-07 18:03:43,345  INFO ContextCleaner:58 - Cleaned shuffle 4
+2018-12-07 18:03:43,346  INFO BlockManagerInfo:58 - Removed broadcast_10_piece0 on localhost:13581 in memory (size: 13.8 KB, free: 2.4 GB)

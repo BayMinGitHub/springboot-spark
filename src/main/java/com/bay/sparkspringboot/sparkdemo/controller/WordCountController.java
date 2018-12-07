@@ -1,6 +1,7 @@
 package com.bay.sparkspringboot.sparkdemo.controller;
 
 import com.bay.sparkspringboot.sparkdemo.service.WordCountService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,13 +19,15 @@ import java.util.Map;
 public class WordCountController {
     @Resource
     private WordCountService wordCountService;
+    @Value("${file.path}")
+    private String filePath;
 
     @RequestMapping("/wordCount")
     @ResponseBody
     public Map<String, Integer> wordCount() {
         Map<String, Integer> map = null;
         try {
-            map = wordCountService.run();
+            map = wordCountService.run(filePath);
         } catch (FileNotFoundException e) {
             System.out.println("文件不存在");
         }
