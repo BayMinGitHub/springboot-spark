@@ -30,7 +30,6 @@ public class ApplicationConfig {
         else
             return new SparkConf().setAppName(appName);
     }
-
 //    @Bean
 //    public JavaSparkContext javaSparkContext() {
 //        return new JavaSparkContext(sparkConf());
