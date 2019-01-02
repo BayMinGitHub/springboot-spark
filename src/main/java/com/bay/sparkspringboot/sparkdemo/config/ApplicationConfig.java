@@ -3,6 +3,7 @@ package com.bay.sparkspringboot.sparkdemo.config;
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.sql.SparkSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -29,6 +30,14 @@ public class ApplicationConfig {
             return new SparkConf().setAppName(appName).setMaster("local");
         else
             return new SparkConf().setAppName(appName);
+    }
+
+    @Bean
+    public SparkSession sparkSession() {
+        if (isLocal)
+            return SparkSession.builder().appName("SparkSQLOnGreenPlum").master("local").getOrCreate();
+        else
+            return SparkSession.builder().appName("SparkSQLOnGreenPlum").getOrCreate();
     }
 //    @Bean
 //    public JavaSparkContext javaSparkContext() {

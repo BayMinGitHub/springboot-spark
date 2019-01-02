@@ -1,7 +1,6 @@
 package com.bay.sparkspringboot.sparkdemo.service
 
 import org.springframework.stereotype.Service
-import java.io.FileNotFoundException
 import java.io.Serializable
 import java.util
 
@@ -17,7 +16,6 @@ import collection.JavaConversions._
   @Autowired
   val sc: SparkContext = null
 
-  @throws[FileNotFoundException]
   def run(filePath: String): util.Map[String, Integer] = {
     val scalaMap: Map[String, Int] = sc.textFile(filePath).flatMap(_.split("[ ,\",<,>]")).map((_, 1)).reduceByKey(_ + _).collectAsMap().toMap
     mapAsJavaMap(scalaMap).asInstanceOf[util.Map[String, Integer]]

@@ -30,6 +30,6 @@ public class GetThingController {
     @RequestMapping("/get_ip")
     @ResponseBody
     public Map<String, String> getIp(@NonNull @RequestParam("filePath") String filePath) {
-        return GetThingService.getIp2(filePath);
+        return GetThingService.getIp(filePath);
     }
 }
