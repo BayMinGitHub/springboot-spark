@@ -1,6 +1,8 @@
 package com.bay.sparkspringboot.sparkdemo.service
 
+import java.text.SimpleDateFormat
 import java.util
+import java.util.Date
 
 import com.bay.sparkspringboot.sparkdemo.util.IpParserUtil
 import org.apache.spark.SparkContext
@@ -19,18 +21,29 @@ import collection.JavaConversions._
 
   def getSay(filePath: String): util.Map[String, String] = {
     val logData: RDD[String] = sc.textFile(filePath)
-    val scalaMap: Map[String, String] = logData.filter(_.contains("say")).map(line => {
-      val data = line.substring(0, line.indexOf("say"))
-      val whoSay = data.substring(0, data.indexOf(">", data.indexOf("STEAM")) + 1)
+    val simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    val map: util.LinkedHashMap[String, String] = new util.LinkedHashMap[String, String]()
+    logData.filter(line => {
+      line.contains("say") && !line.contains("\"Console<")
+    }).map(line => {
+      val data = line.split(" ")
+      val date = data(1)
+      val time = data(3).substring(0, data(3).length - 1)
+      val name = line.substring(line.indexOf(": \"") + 3, line.indexOf("<", line.indexOf(": \"") + 3))
+      val steamId = line.substring(line.indexOf("<STEAM_") + 1, line.indexOf(">", line.indexOf("<STEAM_")))
       val sayWhat = line.substring(line.indexOf("say"), line.length)
-      (whoSay, sayWhat)
-    }).collectAsMap().toMap
-    mapAsJavaMap(scalaMap)
+      (new Date(date + " " + time), (name + " " + steamId, sayWhat))
+    }).sortByKey().collect().foreach(line => {
+      map.put(simpleDateFormat.format(line._1) + " " + line._2._1, line._2._2)
+    })
+    map
   }
 
   def getIp(filePath: String): util.Map[String, String] = {
     val logData: RDD[String] = sc.textFile(filePath)
-    val scalaMap: Map[String, String] = logData.filter(_.contains("address")).filter(_.contains("STEAM")).filter(!_.contains("<BOT>")).map(line => {
+    val scalaMap: Map[String, String] = logData.filter(line => {
+      line.contains("address") && line.contains("STEAM") && !line.contains("<BOT>")
+    }).map(line => {
       val data = line.split(" ")
       val date = data(1)
       val time = data(3)
@@ -41,9 +54,7 @@ import collection.JavaConversions._
     }).map(data => {
       (data._3 + " " + data._4, data._5)
     }).distinct().map(data => {
-      val who = data._1
-      val ip = data._2
-      (who, new IpParserUtil().parserIpByIpSeeker(ip).toString)
+      (data._1, new IpParserUtil().parserIpByIpSeeker(data._2).toString)
     }).collectAsMap().toMap
     mapAsJavaMap(scalaMap)
   }

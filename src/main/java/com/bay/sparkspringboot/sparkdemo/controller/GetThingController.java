@@ -21,15 +21,16 @@ public class GetThingController {
     @Resource
     private GetThingService GetThingService;
 
-    @RequestMapping("/get_say")
+    @RequestMapping("/get_thing")
     @ResponseBody
-    public Map<String, String> getSay(@NonNull @RequestParam("filePath") String filePath) {
-        return GetThingService.getSay(filePath);
-    }
-
-    @RequestMapping("/get_ip")
-    @ResponseBody
-    public Map<String, String> getIp(@NonNull @RequestParam("filePath") String filePath) {
-        return GetThingService.getIp(filePath);
+    public Map<String, String> getThing(@NonNull @RequestParam("method") String method, @NonNull @RequestParam("filePath") String filePath) {
+        switch (method) {
+            case "getSay":
+                return GetThingService.getSay(filePath);
+            case "getIp":
+                return GetThingService.getIp(filePath);
+            default:
+                return null;
+        }
     }
 }
