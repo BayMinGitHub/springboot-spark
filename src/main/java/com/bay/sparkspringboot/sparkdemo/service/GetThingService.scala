@@ -31,16 +31,12 @@ import collection.JavaConversions._
   def getIp(filePath: String): util.Map[String, String] = {
     val logData: RDD[String] = sc.textFile(filePath)
     val scalaMap: Map[String, String] = logData.filter(_.contains("address")).filter(_.contains("STEAM")).filter(!_.contains("<BOT>")).map(line => {
-      // val data = line.replaceAll("[\"<>-]", " ").split("\\s+")
       val data = line.split(" ")
       val date = data(1)
       val time = data(3)
-      // val name = nameTem.substring(0, nameTem.lastIndexOf("<"))
-      // val steamId = data(4).substring(data(4).indexOf("<STEAM_") + 1, data(4).indexOf(">", data(4).indexOf("<STEAM_")))
       val ip = data(data.length - 1).split(":")(0).replace("\"", "")
       val name = line.substring(line.indexOf(": \"") + 3, line.indexOf("<", line.indexOf(": \"") + 3))
       val steamId = line.substring(line.indexOf("<STEAM_") + 1, line.indexOf(">", line.indexOf("<STEAM_")))
-      // val ip = line.substring(line.indexOf("address"), line.length).split("[ :]")(1).substring(1)
       (date, time, name, steamId, ip)
     }).map(data => {
       (data._3 + " " + data._4, data._5)

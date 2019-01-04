@@ -1,7 +1,5 @@
 package com.bay.sparkspringboot.sparkdemo.service
 
-import java.util
-
 import com.alibaba.fastjson.JSON
 import com.bay.sparkspringboot.sparkdemo.model.TbIUser
 import com.bay.sparkspringboot.sparkdemo.util.StringUtil
@@ -9,7 +7,6 @@ import org.apache.spark.sql._
 import org.springframework.beans.factory.annotation.{Autowired, Value}
 import org.springframework.stereotype.Service
 
-import scala.collection.mutable.ListBuffer
 import collection.JavaConversions._
 
 /**
@@ -32,8 +29,6 @@ import collection.JavaConversions._
       .option("password", password)
       .option("dbtable", tableName).load()
     val jsonSeq: Seq[String] = frame.where("req_sid = '" + reqSid + "'").select("*").limit(1).toJSON.collect().toSeq
-    // val list: ListBuffer[TbIUser] = new ListBuffer[TbIUser]
-    // var tbIUser: TbIUser = null
     JSON.parseObject(StringUtil.underlineToHump(new StringBuffer(jsonSeq.get(0))).toString, classOf[TbIUser])
     // for (jsonString <- jsonSeq.toArray) {
     //  return JSON.parseObject(jsonString.toString, classOf[TbIUser])
