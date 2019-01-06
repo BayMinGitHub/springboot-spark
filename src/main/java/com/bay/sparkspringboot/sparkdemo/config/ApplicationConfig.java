@@ -1,8 +1,5 @@
 package com.bay.sparkspringboot.sparkdemo.config;
 
-import org.apache.spark.SparkConf;
-import org.apache.spark.SparkContext;
-import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -20,28 +17,28 @@ public class ApplicationConfig {
     private Boolean isLocal;
 
     @Bean
-    public SparkConf sparkConf() {
-        if (isLocal)
-            return new SparkConf().setAppName(appName).setMaster("local");
-        else
-            return new SparkConf().setAppName(appName);
-    }
-
-    @Bean
     public SparkSession sparkSession() {
         if (isLocal)
-            return SparkSession.builder().appName("SparkSQLOnGreenPlum").master("local").getOrCreate();
+            return SparkSession.builder().appName(appName).master("local").getOrCreate();
         else
-            return SparkSession.builder().appName("SparkSQLOnGreenPlum").getOrCreate();
+            return SparkSession.builder().appName(appName).getOrCreate();
     }
+
+//    @Bean
+//    public SparkConf sparkConf() {
+//        if (isLocal)
+//            return new SparkConf().setAppName(appName).setMaster("local");
+//        else
+//            return new SparkConf().setAppName(appName);
+//    }
 
 //    @Bean
 //    public JavaSparkContext javaSparkContext() {
 //        return new JavaSparkContext(sparkConf());
 //    }
 
-    @Bean
-    public SparkContext sparkContext() {
-        return new SparkContext(sparkConf());
-    }
+//    @Bean
+//    public SparkContext sparkContext() {
+//        return new SparkContext(sparkConf());
+//    }
 }

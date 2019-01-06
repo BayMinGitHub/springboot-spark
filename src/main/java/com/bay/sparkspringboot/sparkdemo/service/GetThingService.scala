@@ -5,8 +5,8 @@ import java.util
 import java.util.Date
 
 import com.bay.sparkspringboot.sparkdemo.util.IpParserUtil
-import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SparkSession
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
@@ -16,10 +16,13 @@ import collection.JavaConversions._
   * Author by BayMin, Date on 2018/12/21.
   */
 @Service class GetThingService {
+  //  @Autowired
+  //  val sc: SparkContext = null
   @Autowired
-  val sc: SparkContext = null
+  val ss: SparkSession = null
 
   def getSay(filePath: String): util.Map[String, String] = {
+    val sc = ss.sparkContext
     val logData: RDD[String] = sc.textFile(filePath)
     val simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     val map: util.LinkedHashMap[String, String] = new util.LinkedHashMap[String, String]()
@@ -40,6 +43,7 @@ import collection.JavaConversions._
   }
 
   def getIp(filePath: String): util.Map[String, String] = {
+    val sc = ss.sparkContext
     val logData: RDD[String] = sc.textFile(filePath)
     val scalaMap: Map[String, String] = logData.filter(line => {
       line.contains("address") && line.contains("STEAM") && !line.contains("<BOT>")

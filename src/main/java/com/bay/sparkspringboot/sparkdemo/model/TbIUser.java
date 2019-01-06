@@ -1,8 +1,6 @@
 package com.bay.sparkspringboot.sparkdemo.model;
 
 import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class TbIUser {
     private String reqSid;
