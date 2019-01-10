@@ -1,13 +1,13 @@
 package com.bay.sparkspringboot.sparkdemo.service
 
+import java.util
+
 import com.alibaba.fastjson.JSON
 import com.bay.sparkspringboot.sparkdemo.model.TbIUser
 import com.bay.sparkspringboot.sparkdemo.util.StringUtil
 import org.apache.spark.sql._
 import org.springframework.beans.factory.annotation.{Autowired, Value}
 import org.springframework.stereotype.Service
-
-import collection.JavaConversions._
 
 /**
   * Author by BayMin, Date on 2018/12/29.
@@ -21,22 +21,18 @@ import collection.JavaConversions._
   @Autowired
   val ss: SparkSession = null
 
-  def run(tableName: String, reqSid: String): TbIUser = {
+  def run(tableName: String): util.LinkedList[TbIUser] = {
+    val list: util.LinkedList[TbIUser] = new util.LinkedList[TbIUser]()
     val frame: DataFrame = ss.read.format("jdbc")
       .option("url", url)
       .option("driver", driver)
       .option("user", user)
       .option("password", password)
       .option("dbtable", tableName).load()
-    val jsonSeq: Seq[String] = frame.where("req_sid = '" + reqSid + "'").select("*").limit(1).toJSON.collect().toSeq
-    JSON.parseObject(StringUtil.underlineToHump(new StringBuffer(jsonSeq.get(0))).toString, classOf[TbIUser])
-    // for (jsonString <- jsonSeq.toArray) {
-    //  return JSON.parseObject(jsonString.toString, classOf[TbIUser])
-    // }
-    // println(tbIUser.getLogTime)
-    // tbIUser
-    // bufferAsJavaList(list)
-    // reader.select("req_sid").limit(1).write.mode("overwrite").saveAsTable("test")
-    // val frame = ss.sql("select * from test")
+    val jsonSeq: Seq[String] = frame.select("*").limit(50).toJSON.collect().toSeq
+    for (jsonString <- jsonSeq) {
+      list.push(JSON.parseObject(StringUtil.underlineToHump(new StringBuffer(jsonString)).toString, classOf[TbIUser]))
+    }
+    list
   }
 }

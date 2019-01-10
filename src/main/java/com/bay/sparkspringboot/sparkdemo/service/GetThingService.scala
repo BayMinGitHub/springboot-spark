@@ -16,8 +16,6 @@ import collection.JavaConversions._
   * Author by BayMin, Date on 2018/12/21.
   */
 @Service class GetThingService {
-  //  @Autowired
-  //  val sc: SparkContext = null
   @Autowired
   val ss: SparkSession = null
 

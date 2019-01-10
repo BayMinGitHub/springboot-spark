@@ -13,8 +13,6 @@ import collection.JavaConversions._
   * Author by BayMin, Date on 2018/12/7.
   */
 @Service class WordCountService extends Serializable {
-  //  @Autowired
-  //  val sc: SparkContext = null
   @Autowired
   val ss: SparkSession = null
 

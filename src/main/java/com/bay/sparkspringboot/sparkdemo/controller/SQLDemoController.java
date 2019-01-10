@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.LinkedList;
 
 /**
  * Author by BayMin, Date on 2018/12/7.
@@ -23,7 +24,7 @@ public class SQLDemoController {
 
     @RequestMapping("/sql_demo")
     @ResponseBody
-    public TbIUser sqlDemo(@NonNull @RequestParam("tableName") String tableName, @NonNull @RequestParam("reqSid") String reqSid) {
-        return sqlDemoService.run(tableName, reqSid);
+    public LinkedList<TbIUser> sqlDemo(@NonNull @RequestParam("tableName") String tableName) {
+        return sqlDemoService.run(tableName);
     }
 }

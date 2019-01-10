@@ -33,27 +33,6 @@ public class TbIUser {
 
     private Date logTime;
 
-    @Override
-    public String toString() {
-        return "TbIUser{" +
-                "reqSid='" + reqSid + '\'' +
-                ", promotionId='" + promotionId + '\'' +
-                ", userId=" + userId +
-                ", serialNumber='" + serialNumber + '\'' +
-                ", productId='" + productId + '\'' +
-                ", provinceCode='" + provinceCode + '\'' +
-                ", eparchyCode='" + eparchyCode + '\'' +
-                ", payFee=" + payFee +
-                ", rechargeTime=" + rechargeTime +
-                ", operaTime=" + operaTime +
-                ", kafkaType='" + kafkaType + '\'' +
-                ", requestTime=" + requestTime +
-                ", retCode='" + retCode + '\'' +
-                ", retMsg='" + retMsg + '\'' +
-                ", logTime=" + logTime +
-                '}';
-    }
-
     public String getReqSid() {
         return reqSid;
     }
@@ -172,5 +151,26 @@ public class TbIUser {
 
     public void setLogTime(Date logTime) {
         this.logTime = logTime;
+    }
+
+    @Override
+    public String toString() {
+        return "TbIUser{" +
+                "reqSid='" + reqSid + '\'' +
+                ", promotionId='" + promotionId + '\'' +
+                ", userId=" + userId +
+                ", serialNumber='" + serialNumber + '\'' +
+                ", productId='" + productId + '\'' +
+                ", provinceCode='" + provinceCode + '\'' +
+                ", eparchyCode='" + eparchyCode + '\'' +
+                ", payFee=" + payFee +
+                ", rechargeTime=" + rechargeTime +
+                ", operaTime=" + operaTime +
+                ", kafkaType='" + kafkaType + '\'' +
+                ", requestTime=" + requestTime +
+                ", retCode='" + retCode + '\'' +
+                ", retMsg='" + retMsg + '\'' +
+                ", logTime=" + logTime +
+                '}';
     }
 }

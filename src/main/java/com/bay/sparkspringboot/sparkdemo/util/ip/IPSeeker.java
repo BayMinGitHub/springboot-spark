@@ -56,8 +56,7 @@ public class IPSeeker {
         try {
             // String ipFilePath = this.getClass().getResource("/qqwry.dat").getFile();
             // System.out.println(ipFilePath);
-            // String ipFilePath = "classpath:/qqwry.dat";
-            String ipFilePath = "/home/sparkdemo/qqwry.dat";
+            String ipFilePath = "hdfs://hadoop010:9000/jars/qqwry.dat";
             ipFile = new RandomAccessFile(ipFilePath, "r");
         } catch (FileNotFoundException e) {
             System.out.println("IP地址信息文件没有找到，IP显示功能将无法使用");

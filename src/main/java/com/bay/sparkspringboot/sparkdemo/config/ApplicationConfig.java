@@ -23,22 +23,4 @@ public class ApplicationConfig {
         else
             return SparkSession.builder().appName(appName).getOrCreate();
     }
-
-//    @Bean
-//    public SparkConf sparkConf() {
-//        if (isLocal)
-//            return new SparkConf().setAppName(appName).setMaster("local");
-//        else
-//            return new SparkConf().setAppName(appName);
-//    }
-
-//    @Bean
-//    public JavaSparkContext javaSparkContext() {
-//        return new JavaSparkContext(sparkConf());
-//    }
-
-//    @Bean
-//    public SparkContext sparkContext() {
-//        return new SparkContext(sparkConf());
-//    }
 }
