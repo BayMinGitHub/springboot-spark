@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service
       .option("user", user)
       .option("password", password)
       .option("dbtable", tableName).load()
-    val jsonSeq: Seq[String] = frame.select("*").limit(50).toJSON.collect().toSeq
+    val jsonSeq: Seq[String] = frame.select("*").orderBy("userId").limit(50).toJSON.collect().toSeq
     for (jsonString <- jsonSeq) {
       list.push(JSON.parseObject(StringUtil.underlineToHump(new StringBuffer(jsonString)).toString, classOf[TbIUser]))
     }

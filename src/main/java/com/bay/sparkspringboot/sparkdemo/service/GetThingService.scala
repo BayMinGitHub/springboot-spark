@@ -56,7 +56,7 @@ import collection.JavaConversions._
     }).map(data => {
       (data._3 + " " + data._4, data._5)
     }).distinct().map(data => {
-      (data._1, new IpParserUtil().parserIpByIpSeeker(data._2).toString)
+      (data._1, IpParserUtil.parserIpByIpIp(data._2).toString)
     }).collectAsMap().toMap
     mapAsJavaMap(scalaMap)
   }
